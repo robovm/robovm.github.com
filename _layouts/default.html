@@ -39,9 +39,9 @@
           <a class="brand" href="#">RoboVM</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#about">Docs</a></li>
-              <li><a href="#contribute">Contribute</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li {% if section == 'front' %} class="active" {% endif %}><a href="#about">Docs</a></li>
+              <li {% if section == 'contribute' %} class="active" {% endif %}><a href="#contribute">Contribute</a></li>
+              <li {% if section == 'contact' %} class="active" {% endif %}><a href="#contact">Contact</a></li>
               <li><a href="#contact">GitHub Project</a></li>
             </ul>
           </div>
