@@ -91,7 +91,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Installing the RoboVM compiler dependencies</h2>
 
-        The RoboVM compiler needs the following tools to be installed on your system:
+        <p>The RoboVM compiler needs the following tools to be installed on your system:</p>
 
         * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
         * "LLVM 3.1":http://llvm.org/releases
@@ -101,9 +101,12 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h3>Mac OS X</h3>
 
-        * Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.
-        * Install Xcode 4.5.2 from the Mac App Store. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
-        * Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:
+        <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
+
+        <p>Install Xcode 4.5.2 from the Mac App Store. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.</p>
+
+        <p>Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:</p>
+        
         <pre>
           curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > clang+llvm-3.1-x86_64-apple-darwin11.tar.gz
           sudo mkdir -p /opt
@@ -113,12 +116,14 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h3>Ubuntu 12.04 (AMD64)</h3>
 
-        Most of the required tools are available in the standard Ubuntu repositories. In a terminal:
+        <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
+
         <pre>
           sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
         </pre>
 
-        Install the LLVM tools in /opt/llvm and add /opt/llvm/bin to the PATH. In a terminal:
+        <p>Install the LLVM tools in /opt/llvm and add /opt/llvm/bin to the PATH. In a terminal:</p>
+
         <pre>
           wget http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz
           sudo tar xvfz clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz -C /opt
@@ -127,7 +132,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Installing RoboVM</h2>
 
-        Download a RoboVM release from ??? or use the package you built by following the instructions in the <a href="#build">Build</a> section above.
+        <p>Download a RoboVM release from ??? or use the package you built by following the instructions in the <a href="#build">Build</a> section above.</p>
 
       </section>
 
