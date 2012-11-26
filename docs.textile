@@ -101,11 +101,9 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h3>Mac OS X</h3>
 
-        Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.
-
-        Install Xcode 4.5.2 from the Mac App Store. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
-
-        Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:
+        * Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+        * Install Xcode 4.5.2 from the Mac App Store. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
+        * Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:
         <pre>
           curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > clang+llvm-3.1-x86_64-apple-darwin11.tar.gz
           sudo mkdir -p /opt
