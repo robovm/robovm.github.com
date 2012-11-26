@@ -28,34 +28,65 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
       </section>
 
-      <section id="build-and-install">
+      <section id="build">
         <div class="page-header">
-          <h1>Build and install instructions</h1>
+          <h1>Build instructions</h1>
         </div>
+
+        <h2>Build prerequisites</h2>
 
         In order to build RoboVM you will need the following tools:
 
-        * "Git 1.7 or newer":http://git-scm.com.
-        * "CMake 2.8.8 or newer":http://www.cmake.org.
-        * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or OpenJDK:http://openjdk.java.net should work.
-        * "Maven 3":http://maven.apache.org.
-        * C/C++ compiler - GCC on Linux, clang on Mac OS X.
+        * "Git 1.7 or newer":http://git-scm.com
+        * "CMake 2.8.8 or newer":http://www.cmake.org
+        * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
+        * "Maven 3":http://maven.apache.org
+        * C/C++ compiler - GCC on Linux, clang on Mac OS X
 
-        <h2>Mac OS X</h2>
+        <h3>Installing the required build tools on Mac OS X</h3>
         
-        <h2>Ubuntu 12.04</h2>
+        * Xcode 4.5.2 includes clang and Git and is available from the Mac App Store. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
+        * Get CMake from the URL above and install it.
+        * Get Maven from the URL above and install it.
+
+        <h3>Installing the required build tools on Ubuntu 12.04 (AMD64)</h3>
+
+        All the required tools are available in the standard Ubuntu repositories. The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10:
 
         <pre>
-          sudo apt-get install build-essential git cmake openjdk-7-jdk
+          wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
+          wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_2.8.9-0ubuntu1_all.deb
+          sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
+          sudo dpkg -i cmake*.deb
         </pre>
 
+        <h2>Building RoboVM</h2>
+
+        Run the following in a terminal to build RoboVM:
+
+        <pre>
+          git clone https://github.com/robovm/robovm.git
+          cd robovm/vm
+          ./build.sh --build=Debug
+          cd ..
+          mvn -DskipTests=true clean install
+        </pre>
+
+        You should now have a tar.gz package in dist/target that you can install using the instructions in the <a href="#install">Install</a> section below.
+
+      </section>
+
+      <section id="install">
+        <div class="page-header">
+          <h1>Install</h1>
+        </div>
       </section>
 
       <section id="license">
         <div class="page-header">
           <h1>License</h1>
         </div>
-        <p>Getting started.</p>
+        
       </section>
 
     </div>
