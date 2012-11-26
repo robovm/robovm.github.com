@@ -46,21 +46,24 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h3>Mac OS X</h3>
         
-        * Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html
-        * Install Xcode 4.5.2 from the Mac App Store. It includes clang and Git. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
-        * Get CMake from the URL above and install it.
+        <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
+
+        <p>Install Xcode 4.5.2 from the Mac App Store. It includes clang and Git. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu</p>
+
+        <p>Download and install CMake.</p>
+        
         * Get Maven from the URL above and install it. Make sure the M2_HOME environment variable is set properly and that the mvn command is in your PATH.
         * Get LLVM from the URL above and install it. Make sure the LLVM llc and opt tools are in your PATH.
 
         <h3>Ubuntu 12.04 (AMD64)</h3>
 
-        Most of the required tools are available in the standard Ubuntu repositories. Open a terminal and run the following commands:
+        <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
         <pre>
           sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
         </pre>
 
-        The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10. Run the following in a terminal:
+        <p>The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10. In a terminal:</p>
 
         <pre>
           wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
@@ -70,7 +73,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Building RoboVM</h2>
 
-        Run the following in a terminal to build RoboVM:
+        <p>Run the following in a terminal to build RoboVM:</p>
 
         <pre>
           git clone https://github.com/robovm/robovm.git
@@ -80,7 +83,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
           mvn -DskipTests=true clean install
         </pre>
 
-        You should now have a tar.gz package in dist/target that you can install using the instructions in the <a href="#install">Install</a> section below.
+        <p>You should now have a tar.gz package in dist/target that you can install using the instructions in the <a href="#install">Install</a> section below.</p>
 
       </section>
 
@@ -108,9 +111,9 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
         <p>Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:</p>
         
         <pre>
-          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > clang+llvm-3.1-x86_64-apple-darwin11.tar.gz
+          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
           sudo mkdir -p /opt
-          sudo tar xvfz clang+llvm-3.1-x86_64-apple-darwin11.tar.gz -C /opt
+          sudo tar llvm.tar.gz -C /opt
           sudo ln -s /opt/clang+llvm-3.1-x86_64-apple-darwin11 /opt/llvm
         </pre>
 
@@ -122,11 +125,11 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
           sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
         </pre>
 
-        <p>Install the LLVM tools in /opt/llvm and add /opt/llvm/bin to the PATH. In a terminal:</p>
+        <p>Install the LLVM tools in /opt/llvm. In a terminal:</p>
 
         <pre>
-          wget http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz
-          sudo tar xvfz clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz -C /opt
+          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz > llvm.tar.gz
+          sudo tar llvm.tar.gz -C /opt
           sudo ln -s /opt/clang+llvm-3.1-x86_64-linux-ubuntu_12.04 /opt/llvm
         </pre>
 
