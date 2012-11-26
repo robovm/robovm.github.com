@@ -9,7 +9,8 @@ section: docs
     <div class="span3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav">
         <li><a href="#about"><i class="icon-chevron-right"></i> About</a></li>
-        <li><a href="#start"><i class="icon-chevron-right"></i> Getting started</a></li>
+        <li><a href="#build"><i class="icon-chevron-right"></i> Build</a></li>
+        <li><a href="#install"><i class="icon-chevron-right"></i> Install</a></li>
         <li><a href="#license"><i class="icon-chevron-right"></i> License</a></li>
       </ul>
     </div>
@@ -43,20 +44,27 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
         * "Maven 3":http://maven.apache.org
         * C/C++ compiler - GCC on Linux, clang on Mac OS X
 
-        <h3>Installing the required build tools on Mac OS X</h3>
+        <h3>Mac OS X</h3>
         
-        * Xcode 4.5.2 includes clang and Git and is available from the Mac App Store. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
+        * Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html
+        * Install Xcode 4.5.2 from the Mac App Store. It includes clang and Git. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
         * Get CMake from the URL above and install it.
-        * Get Maven from the URL above and install it.
+        * Get Maven from the URL above and install it. Make sure the M2_HOME environment variable is set properly and that the mvn command is in your PATH.
+        * Get LLVM from the URL above and install it. Make sure the LLVM llc and opt tools are in your PATH.
 
-        <h3>Installing the required build tools on Ubuntu 12.04 (AMD64)</h3>
+        <h3>Ubuntu 12.04 (AMD64)</h3>
 
-        All the required tools are available in the standard Ubuntu repositories. The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10:
+        Most of the required tools are available in the standard Ubuntu repositories. Open a terminal and run the following commands:
+
+        <pre>
+          sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
+        </pre>
+
+        The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10. Run the following in a terminal:
 
         <pre>
           wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
           wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_2.8.9-0ubuntu1_all.deb
-          sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
           sudo dpkg -i cmake*.deb
         </pre>
 
@@ -80,6 +88,49 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
         <div class="page-header">
           <h1>Install</h1>
         </div>
+
+        <h2>Installing the RoboVM compiler dependencies</h2>
+
+        The RoboVM compiler needs the following tools to be installed on your system:
+
+        * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
+        * "LLVM 3.1":http://llvm.org/releases
+        * An assembler - GCC (on Linux) and clang (on Mac OS X)
+        * A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends
+        * Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed
+
+        <h3>Mac OS X</h3>
+
+        Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+
+        Install Xcode 4.5.2 from the Mac App Store. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.
+
+        Install the LLVM tools in /opt/llvm. Run the following commands in Terminal:
+        <pre>
+          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > clang+llvm-3.1-x86_64-apple-darwin11.tar.gz
+          sudo mkdir -p /opt
+          sudo tar xvfz clang+llvm-3.1-x86_64-apple-darwin11.tar.gz -C /opt
+          sudo ln -s /opt/clang+llvm-3.1-x86_64-apple-darwin11 /opt/llvm
+        </pre>
+
+        <h3>Ubuntu 12.04 (AMD64)</h3>
+
+        Most of the required tools are available in the standard Ubuntu repositories. In a terminal:
+        <pre>
+          sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
+        </pre>
+
+        Install the LLVM tools in /opt/llvm and add /opt/llvm/bin to the PATH. In a terminal:
+        <pre>
+          wget http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz
+          sudo tar xvfz clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz -C /opt
+          sudo ln -s /opt/clang+llvm-3.1-x86_64-linux-ubuntu_12.04 /opt/llvm
+        </pre>
+
+        <h2>Installing RoboVM</h2>
+
+        Download a RoboVM release from ??? or use the package you built by following the instructions in the <a href="#build">Build</a> section above.
+
       </section>
 
       <section id="license">
