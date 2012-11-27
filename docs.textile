@@ -109,8 +109,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <p>Download and install the LLVM tools in /opt/llvm by running the following commands in Terminal:</p>
         
-        <pre><code class="bash">
-          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
+        <pre><code>curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
           sudo mkdir -p /opt
           sudo tar llvm.tar.gz -C /opt
           sudo ln -s /opt/clang+llvm-3.1-x86_64-apple-darwin11 /opt/llvm
