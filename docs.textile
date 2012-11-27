@@ -31,12 +31,12 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
       <section id="build">
         <div class="page-header">
-          <h1>Build instructions</h1>
+          <h1>Building from source</h1>
         </div>
 
         <h2>Build prerequisites</h2>
 
-        In order to build RoboVM you will need the following tools:
+        In order to get the source code and build RoboVM you will need the following tools:
 
         * "Git 1.7 or newer":http://git-scm.com
         * "CMake 2.8.8 or newer":http://www.cmake.org
@@ -44,7 +44,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
         * "Maven 3":http://maven.apache.org
         * C/C++ compiler - GCC on Linux, clang on Mac OS X
 
-        <h3>Mac OS X</h3>
+        <h3>Installing the build tools on Mac OS X</h3>
         
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
@@ -52,10 +52,9 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <p>Download and install CMake.</p>
         
-        * Get Maven from the URL above and install it. Make sure the M2_HOME environment variable is set properly and that the mvn command is in your PATH.
-        * Get LLVM from the URL above and install it. Make sure the LLVM llc and opt tools are in your PATH.
+        <p>Get Maven from the URL above and install it. Make sure the M2_HOME environment variable is set properly as described in the installation instructions and that the mvn command is in your PATH.</p>
 
-        <h3>Ubuntu 12.04 (AMD64)</h3>
+        <h3>Installing the build tools on Ubuntu 12.04 (AMD64)</h3>
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
@@ -73,7 +72,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Building RoboVM</h2>
 
-        <p>Run the following in a terminal to build RoboVM:</p>
+        <p>Run the following commands in a terminal to build RoboVM:</p>
 
         <pre>
           git clone https://github.com/robovm/robovm.git
