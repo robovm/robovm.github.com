@@ -46,7 +46,7 @@ section: docs
           sudo ln -s /opt/clang+llvm-3.1-x86_64-apple-darwin11 /opt/llvm
         </pre>
 
-        <h3>Ubuntu 12.04 (AMD64)</h3>
+        <h4>Ubuntu 12.04 (AMD64)</h4>
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
@@ -88,7 +88,7 @@ section: docs
         * "Maven 3":http://maven.apache.org
         * C/C++ compiler - GCC on Linux, clang on Mac OS X
 
-        <h3>Installing the build tools on Mac OS X</h3>
+        <h4>Installing the build tools on Mac OS X</h4>
         
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
@@ -98,7 +98,7 @@ section: docs
         
         <p>Get Maven from the URL above and install it.</p>
 
-        <h3>Installing the build tools on Ubuntu 12.04 (AMD64)</h3>
+        <h4>Installing the build tools on Ubuntu 12.04 (AMD64)</h4>
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
