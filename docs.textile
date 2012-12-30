@@ -80,6 +80,11 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> in the section below.</p>
 
+        <pre>
+          sudo tar robovm-{{site.robovm.version}}.tar.gz -C /opt
+          sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
+        </pre>
+
       </section>
 
       <section id="build">
