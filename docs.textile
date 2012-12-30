@@ -88,7 +88,7 @@ section: docs
         * "Maven 3":http://maven.apache.org
         * C/C++ compiler - GCC on Linux, clang on Mac OS X
 
-        <h4>Installing the build tools on Mac OS X</h4>
+        <h4>Mac OS X</h4>
         
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
@@ -98,7 +98,7 @@ section: docs
         
         <p>Get Maven from the URL above and install it.</p>
 
-        <h4>Installing the build tools on Ubuntu 12.04 (AMD64)</h4>
+        <h4>Ubuntu 12.04 (AMD64)</h4>
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
