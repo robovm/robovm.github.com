@@ -78,7 +78,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Installing RoboVM</h2>
 
-        <p><a href="http://download.robovm.org">Download a RoboVM release from ??? or use a package built by following the instructions in the <a href="#build">Build</a> section above.</p>
+        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the instructions in the <a href="#build">Build</a> section below.</p>
 
       </section>
 
@@ -91,7 +91,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         In order to get the source code and build RoboVM you will need the following tools:
 
-        * "Git 1.7 or newer":http://git-scm.com
+        * "Git":http://git-scm.com
         * "CMake 2.8.8 or newer":http://www.cmake.org
         * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
         * "Maven 3":http://maven.apache.org
@@ -101,11 +101,11 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
         
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
-        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.</p>
+        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.</p>
 
         <p>Download and install CMake.</p>
         
-        <p>Get Maven from the URL above and install it. Make sure the M2_HOME environment variable is set properly as described in the installation instructions and that the mvn command is in your PATH.</p>
+        <p>Get Maven from the URL above and install it.</p>
 
         <h3>Installing the build tools on Ubuntu 12.04 (AMD64)</h3>
 
@@ -135,7 +135,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
           mvn -DskipTests=true clean install
         </pre>
 
-        <p>You should now have a tar.gz package in dist/target that you can install using the instructions in the <a href="#install">Install</a> section below.</p>
+        <p>You should now have a tar.gz package in dist/target that you can install using the <a href="#install">instructions</a> above.</p>
 
       </section>
 
