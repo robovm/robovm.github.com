@@ -78,7 +78,7 @@ In hac habitasse platea dictumst. Morbi in felis quis ante ultrices pellentesque
 
         <h2>Installing RoboVM</h2>
 
-        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the instructions in the <a href="#build">Build</a> section below.</p>
+        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> in the section below.</p>
 
       </section>
 
