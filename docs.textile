@@ -31,7 +31,7 @@ section: docs
         * A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends
         * Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed
 
-        <h3>Mac OS X</h3>
+        <h4>Mac OS X</h4>
 
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
