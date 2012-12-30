@@ -8,9 +8,10 @@ body {
     font-weight: bold;
 }
 .hero-unit {
-    background: url(../img/bg-inverted.png);
-    color: white;
+/*    background: url(../img/bg-inverted.png);
+    color: white; */
     font-size: 25px;
+    border-bottom: 1px;
 }
 .hero-unit h1 {
     font-size: 75px;
