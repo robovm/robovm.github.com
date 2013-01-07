@@ -25,7 +25,11 @@ section: front
             $(document).ready(function() {
               var content = $("#update-site-popover").html();
               console.log(content);
-              $('#update-site-link').clickover({html: true, placement: 'bottom', title: 'Get the Eclipse plug-in', content: content});
+              $('#update-site-link').clickover({
+                html: true, 
+                placement: 'bottom', 
+                content: content
+              });
               //ZeroClipboard.setMoviePath("http://www.robovm.org/js/ZeroClipboard.swf");
               //var clip = new ZeroClipboard($("#update-site-link"));
               ////clip.setHandCursor(true);
