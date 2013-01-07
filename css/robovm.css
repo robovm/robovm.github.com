@@ -1,6 +1,5 @@
 body {
     padding-top: 40px;
-/*    padding-bottom: 40px; *//
 }
 
 section {
@@ -31,6 +30,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 .hero-unit h1 {
     font-size: 75px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .hero-unit .get-started {
