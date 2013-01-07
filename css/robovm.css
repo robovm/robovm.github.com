@@ -1,11 +1,10 @@
-bbbody {
-    /* background: url(../img/bg.png); */
-    padding-top: 60px;
-    padding-bottom: 40px;
+body {
+    padding-top: 40px;
+/*    padding-bottom: 40px; *//
 }
 
-sssection {
-  margin-bottom: 60px;
+section {
+  padding-top: 30px;
 }
 
 .page-header {
