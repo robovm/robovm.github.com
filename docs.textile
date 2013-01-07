@@ -148,10 +148,12 @@ section: docs
 
     </div>
 
+    <notextile>
     <script type="text/javascript">
       $(document).ready(function() {
         $("#navbar").affix();
       });
     </script>
+  </notextile>
 
 </div>
