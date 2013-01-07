@@ -16,10 +16,14 @@ section: front
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz" class="btn btn-primary btn-large">Download &raquo;</a></p>
         <p>
           <a href="docs.html#install">Installation instructions &raquo;</a><br/>
-          <a id="update-site-link" href="#" data-content="To install RoboVM for Eclipse, open Eclipse, go to &apos;Help > Install New Software&apos;, and paste the URL below into the dialog box. Then, follow the on-screen instructions from there.">Get the Eclipse plug-in &raquo;</a>
+          <a id="update-site-link" href="#" data-content="">Get the Eclipse plug-in &raquo;</a>
+          <div id="update-site-popover" style="display: none;">To install RoboVM for Eclipse, open Eclipse, go to &apos;Help > Install New Software&apos;, 
+            and paste the URL below into the dialog box. Then, follow the on-screen instructions from there.
+          </div>
           <script type="text/javascript">
             $(document).ready(function() {
-              $('#update-site-link').clickover({html: true, placement: 'bottom'});
+              var content = $("#update-site-popover").html();
+              $('#update-site-link').clickover({html: true, placement: 'bottom', title: 'Get the Eclipse plug-in', content: content});
               //ZeroClipboard.setMoviePath("http://www.robovm.org/js/ZeroClipboard.swf");
               //var clip = new ZeroClipboard($("#update-site-link"));
               ////clip.setHandCursor(true);
