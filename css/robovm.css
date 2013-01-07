@@ -14,6 +14,7 @@ section {
     font-weight: bold;
 }
 .hero-unit {
+    margin-top: 20px;
 /*    background: url(../img/bg-inverted.png);
     color: white; */
 
@@ -30,7 +31,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 .hero-unit h1 {
     font-size: 75px;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 .hero-unit .get-started {
