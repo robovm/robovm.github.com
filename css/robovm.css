@@ -148,7 +148,7 @@ footer {
   opacity: 1;
 }
 .bs-docs-sidenav.affix {
-  top: 40px;
+/*  top: 40px; */
 }
 .bs-docs-sidenav.affix-bottom {
   position: absolute;
