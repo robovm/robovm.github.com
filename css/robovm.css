@@ -53,6 +53,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     height: 200px;
     background-color: white;
 }
+.hero-unit .popover {
+    font-size: 14px;
+}
 .usps h2 {
     font-size: 35px;
 }
