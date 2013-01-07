@@ -144,7 +144,15 @@ section: docs
           <h1>License</h1>
         </div>
         
-        <p>Each sub module in the GitHub repository contains a LICENSE.txt
+        <p>
+          One of the goals of RoboVM has been to enable the development of commercial,
+          closed-source applications. In the runtime, 3rd party libraries have been 
+          chosen carefully to avoid restricting how original source code consumed by 
+          and binaries produced by the compiler may be used and distributed.
+        </p>
+
+        <p>
+          Each sub module in the GitHub repository contains a LICENSE.txt
           file and a NOTICE.txt file. The LICENSE.txt file contains the
           complete legal text for the license that module is released under.
           The NOTICE.txt file contains the copyright statement for the module
@@ -152,7 +160,7 @@ section: docs
           the module.
         </p>
 
-        <h2>Compile time tools license</h2>
+        <h2>Compile time tools</h2>
 
         <p>
           The compiler and the Eclipse plug-in are GPLv2 licensed. The compiler
@@ -162,7 +170,7 @@ section: docs
           file in the GitHub repostory.
         </p>
 
-        <h2>Runtime libraries licenses</h2>
+        <h2>Runtime libraries</h2>
 
         <p>
           Executables and apps produced by the compiler contain no GPLed code.
