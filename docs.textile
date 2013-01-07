@@ -165,7 +165,7 @@ section: docs
         <p>
           The compiler and the Eclipse plug-in are GPLv2 licensed. The compiler
           has a few 3rd party dependencies that have been released under different 
-          open source licenses. For a complete list please see the 
+          open source licenses. For a complete list see the 
           <a href="https://github.com/robovm/robovm/blob/master/compiler/NOTICE.txt">compiler/NOTICE.txt</a>
           file in the GitHub repostory.
         </p>
@@ -177,7 +177,7 @@ section: docs
           The runtime class libraries and the runtime native libraries which are
           linked into the final binaries are all Apache License v2.0 licensed,
           licensed under BSD like licenses or placed in the public domain.
-          For a complete list please see the 
+          For a complete list see the 
           <a href="https://github.com/robovm/robovm/blob/master/vm/NOTICE.txt">vm/NOTICE.txt</a> and
           <a href="https://github.com/robovm/robovm/blob/master/rt/NOTICE.txt">rt/NOTICE.txt</a>
           files in the GitHub repostory.
