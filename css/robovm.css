@@ -87,7 +87,7 @@ footer {
 }
 
 @media (max-width: 979px) {
-  .navbar-inverse .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a {
+  body .navbar-inverse .nav-collapse .nav > li > a {
     color: white;
   }
 }
