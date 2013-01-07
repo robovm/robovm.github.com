@@ -62,10 +62,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     display: none;
 }
 .hero-unit .popover .update-site-url {
-    border: 1px solid #cccccc;
     font-size: 14px;
-    padding: 10px;
-    margin: 5px;
+    padding: 0px;
+    padding-top: 5px;
+    margin: 0px;
     text-align: center;
 }
 .usps h2 {
