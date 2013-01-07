@@ -40,10 +40,11 @@ section: docs
         <p>Download and install the LLVM tools to /opt/llvm by running the following commands in a terminal:</p>
         
         <pre>
-          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
+          curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
           sudo mkdir -p /opt
-          sudo tar llvm.tar.gz -C /opt
-          sudo ln -s /opt/clang+llvm-3.1-x86_64-apple-darwin11 /opt/llvm
+          sudo tar xvfz llvm.tar.gz -C /opt
+          sudo rm -f /opt/llvm
+          sudo ln -s /opt/clang+llvm-3.2-x86_64-apple-darwin11 /opt/llvm
         </pre>
 
         <h4>Ubuntu 12.04 (AMD64)</h4>
@@ -57,18 +58,26 @@ section: docs
         <p>Download and install the LLVM tools to /opt/llvm:</p>
 
         <pre>
-          curl http://llvm.org/releases/3.1/clang+llvm-3.1-x86_64-linux-ubuntu_12.04.tar.gz > llvm.tar.gz
-          sudo tar llvm.tar.gz -C /opt
-          sudo ln -s /opt/clang+llvm-3.1-x86_64-linux-ubuntu_12.04 /opt/llvm
+          curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz > llvm.tar.gz
+          sudo tar xvfz llvm.tar.gz -C /opt
+          sudo rm -f /opt/llvm
+          sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
         </pre>
 
         <h2>Installing RoboVM</h2>
 
-        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> in the section below then run the following commands in a terminal to install it to /opt/robovm:</p>
+        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
 
         <pre>
           sudo tar robovm-{{site.robovm.version}}.tar.gz -C /opt
+          sudo rm -f /opt/robovm
           sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
+        </pre>
+
+        <p>If you had a previous RoboVM version installed it is recommended that you remove the cache of compiled classes:</p>
+
+        <pre>
+          rm -rf ~/.robovm/cache
         </pre>
 
       </section>
