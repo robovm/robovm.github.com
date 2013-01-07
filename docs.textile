@@ -149,7 +149,9 @@ section: docs
     </div>
 
     <script type="text/javascript">
-      $('#navbar').affix();
+      $(document).ready(function() {
+        $('#navbar').affix();
+      });
     </script>
 
 </div>
