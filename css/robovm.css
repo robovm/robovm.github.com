@@ -57,6 +57,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-size: 12px;
     line-height: 20px;
 }
+.hero-unit .popover #update-site-url {
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    padding: 10px;
+    margin: 5px;
+}
 .usps h2 {
     font-size: 35px;
 }
