@@ -26,7 +26,7 @@ section: docs
         <p>The RoboVM compiler needs the following tools to be installed on your system:</p>
 
         * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
-        * "LLVM 3.1":http://llvm.org/releases
+        * "LLVM 3.2":http://llvm.org/releases
         * An assembler - GCC (on Linux) and clang (on Mac OS X) are used as assembler frontends
         * A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends
         * Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed
