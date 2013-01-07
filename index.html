@@ -23,10 +23,10 @@ section: front
           <script type="text/javascript">
             $(document).ready(function() {
               ZeroClipboard.setMoviePath("http://www.robovm.org/js/ZeroClipboard.swf");
-              var clip = new ZeroClipboard.Client();
-              clip.setHandCursor(true);
+              var clip = new ZeroClipboard();
+              //clip.setHandCursor(true);
               clip.setText("http://download.robovm.org/eclipse/site.xml");         
-              clip.glue("update-site-link");
+              clip.glue($("small#update-site-link"));
             });
           </script>
         </p>
