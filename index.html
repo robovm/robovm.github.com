@@ -16,18 +16,19 @@ section: front
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz" class="btn btn-primary btn-large">Download &raquo;</a></p>
         <p>
           <a href="docs.html#install">Installation instructions &raquo;</a><br/>
-          <a id="update-site-anchor" href="#">Eclipse plug-in update site:</a>
-          <div class="update-site-link" title="URL Copied To Clipboard" data-clipboard-text="http://download.robovm.org/eclipse/site.xml" data-content="To install RoboVM for Eclipse, open Eclipse, go to &apos;Help > Install New Software&apos;, and paste this URL into the dialog box. Then, follow the on-screen instructions from there." id="update-site-link">
+          <a id="update-site-link" href="#">Get the Eclipse plug-in &raquo;</a>
+          <div class="update-site-link" title="URL Copied To Clipboard" data-clipboard-text="http://download.robovm.org/eclipse/site.xml" data-content="To install RoboVM for Eclipse, open Eclipse, go to &apos;Help > Install New Software&apos;, and paste this URL into the dialog box. Then, follow the on-screen instructions from there." id="update-site-lllink">
             http://download.robovm.org/eclipse/site.xml
           </div>
           <script type="text/javascript">
             $(document).ready(function() {
-              ZeroClipboard.setMoviePath("http://www.robovm.org/js/ZeroClipboard.swf");
-              var clip = new ZeroClipboard($("#update-site-link"));
-              //clip.setHandCursor(true);
-              clip.on( 'complete', function(client, args) {
-                alert("Copied text to clipboard: " + args.text );
-              });
+              $('#update-site-link').popover(options);
+              //ZeroClipboard.setMoviePath("http://www.robovm.org/js/ZeroClipboard.swf");
+              //var clip = new ZeroClipboard($("#update-site-link"));
+              ////clip.setHandCursor(true);
+              //clip.on( 'complete', function(client, args) {
+              //  alert("Copied text to clipboard: " + args.text );
+              //});
             });
           </script>
         </p>
