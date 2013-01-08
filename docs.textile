@@ -152,8 +152,8 @@ section: docs
         </p>
 
         <p>
-          Each sub module in the GitHub repository contains a LICENSE.txt
-          file and a NOTICE.txt file. The LICENSE.txt file contains the
+          Each sub module in the <a href="https://github.com/robovm/robovm/">GitHub repository</a> contains LICENSE.txt
+          and NOTICE.txt files. The LICENSE.txt file contains the
           complete legal text for the license that module is released under.
           The NOTICE.txt file contains the copyright statement for the module
           and information on the licenses of any 3rd party dependencies used by

@@ -1,0 +1,43 @@
+---
+layout: default
+title: support
+section: support
+---
+<div class="container">
+
+  <div class="row">
+    <div class="span12">
+
+      <section id="install">
+        <div class="page-header">
+          <h1>Get help</h1>
+        </div>
+
+        <div class="alert alert-block">
+          <h4>Note!</h4>
+          <p>
+            Please don't use the GitHub issues page to ask for help. It should only
+            be used to track bugs, feature requests, and similar.
+          </p>
+          <p>
+            Don't ask questions already answered. Please search the 
+            channels listed below for an answer before asking your question.
+          </p>
+        </div>
+
+        <h2>Google Groups</h2>
+        <p>
+          Use the <a href="https://groups.google.com/group/robovm">robovm group</a> on Google 
+          Groups to ask for help and discuss all kinds of matters regarding this project.
+        </p>
+
+        <h2>Stack Overflow</h2>
+        <p>
+          You can also ask for help on <a href="http://stackoverflow.com/">Stack Overflow</a>. Just 
+          make sure you tag your question with <code>robovm</code> and we will listen.
+        </p>
+      </section>
+
+    </div>
+
+</div>
