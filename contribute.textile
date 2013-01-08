@@ -1,0 +1,87 @@
+---
+layout: default
+title: contribute
+section: contribute
+---
+<div class="container">
+
+  <div class="row">
+
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav">
+        <!-- <li><a href="#about"><i class="icon-chevron-right"></i> About</a></li> -->
+        <li><a href="#report-a-bug"><i class="icon-chevron-right"></i> Report a bug</a></li>
+        <li><a href="#patches"><i class="icon-chevron-right"></i> Code contributions</a></li>
+        <li><a href="#website"><i class="icon-chevron-right"></i> Web site contributions</a></li>
+      </ul>
+    </div>
+
+    <div class="span9">
+      <section id="report-a-bug">
+        <div class="page-header">
+          <h1>Report a bug</h1>
+        </div>
+
+        <p>
+          Use the <a href="https://github.com/robovm/robovm/issues">GitHub issues page</a> to report
+          bugs. Please describe how to reproduce the bug or even better, write a small
+          test program that exposes the bug.
+        </p>
+
+      </section>
+
+      <section id="patches">
+        <div class="page-header">
+          <h1>Code contributions</h1>
+        </div>
+
+        <div class="alert alert-info alert-block">
+          <h4>Important!</h4>
+          Before we can accept your code contributions you must sign and submit
+          the Contributors License Agreement.
+        </div>
+
+        <p>
+          Want to start hacking on this project? Patches are always welcome! Just
+          fork the <a href="https://github.com/robovm/robovm">repository</a> and
+          submit a pull request when you're done. Original code contributions 
+          (i.e. code written by you) to any of the compile time tools (e.g. the 
+          <code>compiler</code> and the <code>eclipse</code> modules) must be 
+          licensed under the GPLv2 license. Original code contributions to the
+          runtime libraries must be licensed under the Apache License v2.0. We
+          will not accept runtime library code contributions that have 3rd party 
+          dependencies licensed under any version of the GPL or the LGPL.
+        </p>
+        <p>
+          For Java code contributions please make sure you use the proper 
+          Formatter and Code Templates in Eclipse by importing the global 
+          <a href="https://github.com/robovm/robovm/blob/master/formatter.xml">formatter.xml</a>
+          file and the codetemplates.xml file corresponding to the module you're 
+          working on. We use CamelCase for type, function and variable names.
+          We use only spaces, and indent 4 spaces at a time. No newline before 
+          the start brace of blocks.
+        </p>
+        <p>
+          For C/C++ code contributions please use coding style similar to the
+          Java coding conventions described above. Have a look at the code in
+          <code>vm/core/</code> if unsure.
+        </p>
+
+      </section>
+
+      <section id="website">
+        <div class="page-header">
+          <h1>Web site contributions</h1>
+        </div>
+
+        <p>
+          The web site sources are <a href="https://github.com/robovm/robovm.github.com">available on GitHub</a>.
+          If you want to add new content, fix typos, change the web site design or
+          similar just fork the repository and submit a pull request.
+        </p>
+
+      </section>
+
+    </div>
+
+</div>
