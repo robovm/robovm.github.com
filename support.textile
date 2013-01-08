@@ -10,19 +10,15 @@ section: support
 
       <section id="install">
         <div class="page-header">
-          <h1>Get help</h1>
+          <h1>Getting help</h1>
         </div>
 
         <div class="alert alert-block">
           <h4>Note!</h4>
-          <p>
-            Please don't use the GitHub issues page to ask for help. It should only
-            be used to track bugs, feature requests, and similar.
-          </p>
-          <p>
-            Don't ask questions already answered. Please search the 
-            channels listed below for an answer before asking your question.
-          </p>
+          Please don't use the GitHub issues page to ask for help. It should only
+          be used to track bugs, feature requests, and similar.
+          And don't ask questions already answered. Please search the 
+          channels listed below for an answer before asking your question.
         </div>
 
         <h2>Google Groups</h2>
