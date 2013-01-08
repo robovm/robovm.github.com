@@ -13,6 +13,7 @@ section: contribute
         <li><a href="#report-a-bug"><i class="icon-chevron-right"></i> Report a bug</a></li>
         <li><a href="#patches"><i class="icon-chevron-right"></i> Code contributions</a></li>
         <li><a href="#website"><i class="icon-chevron-right"></i> Web site contributions</a></li>
+        <li><a href="#cla"><i class="icon-chevron-right"></i> Contributors License Agreement</a></li>
       </ul>
     </div>
 
@@ -38,7 +39,7 @@ section: contribute
         <div class="alert alert-info alert-block">
           <h4>Important!</h4>
           Before we can accept your code contributions you must sign and submit
-          the Contributors License Agreement.
+          a <a href="#cla">Contributors License Agreement</a>.
         </div>
 
         <p>
@@ -80,6 +81,27 @@ section: contribute
           similar just fork the repository and submit a pull request.
         </p>
 
+      </section>
+
+      <section id="cla">
+        <div class="page-header">
+          <h1>Contributors License Agreement</h1>
+        </div>
+
+        <p>
+          The Contributors License Agreement comes in two flavors, one for 
+          <a href="">individual contributors</a> and one for <a href="">entities</a>
+          (companies, foundations, or other organizations). Print it, sign it
+          and scan it (or use a camera to photograph it) and e-mail it to 
+          <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a>.
+        </p>
+
+        <p>
+          If you are making a contribution that is not your work (for example, a 
+          patch or library written by someone else), please contact 
+          <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a> for 
+          guidance on whether any additional steps are needed.
+        </div>
       </section>
 
     </div>
