@@ -60,7 +60,8 @@ section: contribute
           file and the codetemplates.xml file corresponding to the module you're 
           working on. We use CamelCase for type, function and variable names.
           We use only spaces, and indent 4 spaces at a time. No newline before 
-          the start brace of blocks.
+          the start brace of blocks. American English spelling is preferred (e.g. 
+          'color' instead of 'colour').
         </p>
         <p>
           For C/C++ code contributions please use coding style similar to the
@@ -93,7 +94,8 @@ section: contribute
           <a href="">individual contributors</a> and one for <a href="">entities</a>
           (companies, foundations, or other organizations). Print it, sign it
           and scan it (or use a camera to photograph it) and e-mail it to 
-          <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a>.
+          <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a>. Include
+          your GitHub user name in the e-mail.
         </p>
 
         <p>
