@@ -68,8 +68,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     text-align: center;
 }
 .social {
-    padding: 15px 0;
+    padding-bottom: 25px;
     text-align: center;
+}
+.social ul {
+    list-style: none;
+}
+.social ul li {
+    display: inline-block;
+    padding: 0 5px;
 }
 .usps h2 {
     font-size: 35px;
