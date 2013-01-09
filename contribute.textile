@@ -91,7 +91,8 @@ section: contribute
 
         <p>
           The Contributors License Agreement comes in two flavors, one for 
-          <a href="">individual contributors</a> and one for <a href="">entities</a>
+          <a href="http://download.robovm.org/RoboVM-HA-CLA-I-ANY.pdf">individual contributors</a>
+          and one for <a href="http://download.robovm.org/RoboVM-HA-CLA-E-ANY.pdf">entities</a>
           (companies, foundations, or other organizations). Print it, sign it
           and scan it (or use a camera to photograph it) and e-mail it to 
           <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a>. Include
