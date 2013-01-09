@@ -13,7 +13,7 @@ section: support
           <h1>Getting help</h1>
         </div>
 
-        <div class="alert alert-block">
+        <div class="alert alert-info alert-block">
           <h4>Note!</h4>
           Please don't use the GitHub issues page to ask for help. It should only
           be used to track bugs, feature requests, and similar.
