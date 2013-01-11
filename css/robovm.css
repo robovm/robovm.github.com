@@ -231,6 +231,9 @@ footer {
     width: auto;
     margin-bottom: 20px;
   }
+  .bs-docs-sidenav a {
+    width: auto;
+  }  
   .bs-docs-sidenav.affix {
     position: static;
     width: auto;
