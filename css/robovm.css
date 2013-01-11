@@ -95,6 +95,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     color: #772953;
 }
 pre.prettyprint {
+    padding: 9.5px;
     border: 1px solid #CCC;
     border: 1px solid rgba(0, 0, 0, 0.15);
 }

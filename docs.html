@@ -9,7 +9,7 @@ section: docs
     <div class="span3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav">
         <li><a href="#intro"><i class="icon-chevron-right"></i> Introduction</a></li>
-        <li><a href="#getting-started"><i class="icon-chevron-right"></i> Get Started</a></li>
+        <li><a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a></li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
         <li><a href="#license"><i class="icon-chevron-right"></i> License</a></li>
       </ul>
@@ -80,7 +80,7 @@ sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
 
 <pre>
-sudo tar robovm-{{site.robovm.version}}.tar.gz -C /opt
+sudo tar xvfz robovm-{{site.robovm.version}}.tar.gz -C /opt
 sudo rm -f /opt/robovm
 sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
 </pre>
