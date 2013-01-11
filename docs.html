@@ -47,46 +47,46 @@ section: docs
 
         <p>Download and install the LLVM tools to /opt/llvm by running the following commands in a terminal:</p>
         
-        <pre>
-          curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
-          sudo mkdir -p /opt
-          sudo tar xvfz llvm.tar.gz -C /opt
-          sudo rm -f /opt/llvm
-          sudo ln -s /opt/clang+llvm-3.2-x86_64-apple-darwin11 /opt/llvm
-        </pre>
+<pre>
+curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
+sudo mkdir -p /opt
+sudo tar xvfz llvm.tar.gz -C /opt
+sudo rm -f /opt/llvm
+sudo ln -s /opt/clang+llvm-3.2-x86_64-apple-darwin11 /opt/llvm
+</pre>
 
         <h4>Ubuntu 12.04 (AMD64)</h4>
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
-        <pre>
-          sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
-        </pre>
+<pre>
+sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
+</pre>
 
         <p>Download and install the LLVM tools to /opt/llvm:</p>
 
-        <pre>
-          curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz > llvm.tar.gz
-          sudo tar xvfz llvm.tar.gz -C /opt
-          sudo rm -f /opt/llvm
-          sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
-        </pre>
+<pre>
+curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz > llvm.tar.gz
+sudo tar xvfz llvm.tar.gz -C /opt
+sudo rm -f /opt/llvm
+sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
+</pre>
 
         <h3>Installing RoboVM</h3>
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
 
-        <pre>
-          sudo tar robovm-{{site.robovm.version}}.tar.gz -C /opt
-          sudo rm -f /opt/robovm
-          sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
-        </pre>
+<pre>
+sudo tar robovm-{{site.robovm.version}}.tar.gz -C /opt
+sudo rm -f /opt/robovm
+sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
+</pre>
 
         <p>If you had a previous RoboVM version installed it is recommended that you remove the cache of compiled classes:</p>
 
-        <pre>
-          rm -rf ~/.robovm/cache
-        </pre>
+<pre>
+rm -rf ~/.robovm/cache
+</pre>
 
         <h2>Your first RoboVM program</h2>
 
@@ -95,26 +95,26 @@ section: docs
           create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
-        <pre class="prettyprint">
-          public class HelloWorld {
-          &nbsp;   public static void main(String[] args) {
-          &nbsp;        System.out.println("Hello world!");
-          &nbsp;    }
-          }
-        </pre>
+<pre class="prettyprint">
+public class HelloWorld {
+    public static void main(String[] args) {
+         System.out.println("Hello world!");
+     }
+}
+</pre>
 
         <p>
           Compile the <code>HelloWorld.java</code> using <code>javac</code>:
         </p>
-        <pre>
-          mkdir classes
-          javac -d classes/ HelloWorld.java
-        </pre>
+<pre>
+mkdir classes
+javac -d classes/ HelloWorld.java
+</pre>
 
         <p>Finally, compile the Java bytecode into native code using:</p>
-        <pre>
-          /opt/robovm/bin/robovm -verbose -cp classes/ HelloWorld
-        </pre>
+<pre>
+/opt/robovm/bin/robovm -verbose -cp classes/ HelloWorld
+</pre>
 
         <div class="alert alert-info">
           <strong>Note!</strong> When you compile a program using RoboVM it will
@@ -131,16 +131,16 @@ section: docs
         <p>
           You should now have a native executable called <code>HelloWorld/HelloWorld</code>. 
           Running it should print:</p>
-        <pre>
-          Hello world!
-        </pre>
+<pre>
+Hello world!
+</pre>
 
         <p>Let's take a quick peek at the contents of the <code>HelloWorld</code> folder:</p>
-        <pre>
-          HelloWorld/lib/boot/robovm-rt.jar
-          HelloWorld/lib/classes0.jar
-          HelloWorld/HelloWorld
-        </pre>
+<pre>
+HelloWorld/lib/boot/robovm-rt.jar
+HelloWorld/lib/classes0.jar
+HelloWorld/HelloWorld
+</pre>
 
         <p>
           This is the final product for this simple console program. Since we
@@ -203,29 +203,29 @@ section: docs
 
         <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
 
-        <pre>
-          sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
-        </pre>
+<pre>
+sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
+</pre>
 
         <p>The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10:</p>
 
-        <pre>
-          wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
-          wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_2.8.9-0ubuntu1_all.deb
-          sudo dpkg -i cmake*.deb
-        </pre>
+<pre>
+wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
+wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_2.8.9-0ubuntu1_all.deb
+sudo dpkg -i cmake*.deb
+</pre>
 
         <h2>Building RoboVM</h2>
 
         <p>Run the following commands in a terminal to build RoboVM:</p>
 
-        <pre>
-          git clone https://github.com/robovm/robovm.git
-          cd robovm/vm
-          ./build.sh --build=Debug
-          cd ..
-          mvn -DskipTests=true clean install
-        </pre>
+<pre>
+git clone https://github.com/robovm/robovm.git
+cd robovm/vm
+./build.sh --build=Debug
+cd ..
+mvn -DskipTests=true clean install
+</pre>
 
         <p>You should now have a tar.gz package in dist/target that you can install using the <a href="#getting-started">instructions</a> above.</p>
 
