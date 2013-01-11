@@ -100,7 +100,8 @@ pre.prettyprint {
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 pre {
-    overflow: scroll;
+    overflow: auto;
+    white-space: pre;
 }
 footer {
   margin-top: 50px;
