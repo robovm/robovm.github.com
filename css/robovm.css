@@ -135,7 +135,7 @@ footer {
 }
 .bs-docs-sidenav > li > a {
   display: block;
-  width: 190px;
+  wwwidth: 190px;
   margin: 0 0 -1px;
   padding: 8px 14px;
   border: 1px solid #e5e5e5;
@@ -145,7 +145,7 @@ footer {
   padding-right: 0;
 }
 .bs-docs-sidenav > li > ul.nav.nav-list > li > a {
-  width: 179px;
+  wwwidth: 179px;
   margin: 0 0 -1px;
   padding: 8px 14px 8px 25px;
   border: 1px solid #e5e5e5;
@@ -231,9 +231,6 @@ footer {
     width: auto;
     margin-bottom: 20px;
   }
-  ul.bs-docs-sidenav > li > a, ul.bs-docs-sidenav > li > ul > li > a {
-    width: auto;
-  }  
   .bs-docs-sidenav.affix {
     position: static;
     width: auto;
