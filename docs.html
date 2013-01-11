@@ -33,17 +33,20 @@ section: docs
 
         <p>The RoboVM compiler requires the following tools to be installed on your system:</p>
 
-        * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
-        * "LLVM 3.2":http://llvm.org/releases
-        * An assembler - GCC (on Linux) and clang (on Mac OS X) are used as assembler frontends
-        * A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends
-        * Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed
+        <ul>
+          <li>Java JDK 6 or newer - <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle's JDK</a> 
+            or <a href="http://openjdk.java.net should work">OpenJDK</a></li>
+          <li><a href="http://llvm.org/releases">LLVM 3.2</li>
+          <li>An assembler - GCC (on Linux) and clang (on Mac OS X) are used as assembler frontends</li>
+          <li>A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends</li>
+          <li>Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed</li>
+        </ul>
 
         <h4>Mac OS X</h4>
 
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
-        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.</p>
+        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the <em>Xcode &rarr; Preferences...</em> menu.</p>
 
         <p>Download and install the LLVM tools to /opt/llvm by running the following commands in a terminal:</p>
         
@@ -129,8 +132,10 @@ javac -d classes/ HelloWorld.java
         </div>
 
         <p>
-          You should now have a native executable called <code>HelloWorld/HelloWorld</code>. 
-          Running it should print:</p>
+          You should now have a native executable called <code>HelloWorld/HelloWorld</code>.
+          Since we didn't specify a CPU or OS to the <code>/opt/robovm/bin/robovm</code>
+          command the compiler will produce a binary which can be run on the 
+          current system (either Linux or Mac OS X). Running it should print:</p>
 <pre>
 Hello world!
 </pre>
@@ -143,13 +148,7 @@ HelloWorld/HelloWorld
 </pre>
 
         <p>
-          This is the final product for this simple console program. Since we
-          didn't specify a CPU or OS to the <code>/opt/robovm/bin/robovm</code>
-          command the compiler will produce a binary which can be run on the 
-          current system (either Linux or Mac OS X).
-        </p>
-        <p>
-          The jar files in 
+          This is the final product for this simple console program. The jar files in 
           <code>HelloWorld/lib/boot/</code> are the jar files which were
           specified using the <code>-bootclasspath</code> command line argument.
           Since we didn't specify anything RoboVM will add <code>robovm-rt.jar</code> for us.
@@ -183,17 +182,20 @@ HelloWorld/HelloWorld
 
         In order to get the source code and build RoboVM you will need the following tools:
 
-        * "Git":http://git-scm.com
-        * "CMake 2.8.8 or newer":http://www.cmake.org
-        * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
-        * "Maven 3":http://maven.apache.org
-        * C/C++ compiler - GCC on Linux, clang on Mac OS X
+        <ul>
+          <li><a href="http://git-scm.com">Git</a></li>
+          <li><a href="http://www.cmake.org">CMake 2.8.8 or newer</a></li>
+          <li>Java JDK 6 or newer - <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle's JDK</a> 
+            or <a href="http://openjdk.java.net">OpenJDK</a> should work</li>
+          <li><a href="http://maven.apache.org">Maven 3</a></li>
+          <li>C/C++ compiler - GCC on Linux, clang on Mac OS X</li>
+        </ul>
 
         <h4>Mac OS X</h4>
         
         <p>Download and install Java SE JDK 7 from "Oracle":http://www.oracle.com/technetwork/java/javase/downloads/index.html.</p>
 
-        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the Xcode -> Preferences... menu.</p>
+        <p>Install "Xcode 4.5.2 from the Mac App Store":https://itunes.apple.com/us/app/xcode/id497799835?mt=12. It includes clang. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the <em>Xcode &rarr; Preferences...</em> menu.</p>
 
         <p>Download and install CMake.</p>
         
