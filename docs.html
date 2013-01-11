@@ -75,6 +75,13 @@ sudo rm -f /opt/llvm
 sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
 </pre>
 
+        <p>On Linux we need to download an ICU data file and place it in /usr/share/icu:</p>
+
+<pre>
+sudo mkdir -p /usr/share/icu
+sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
+</pre>
+
         <h3>Installing RoboVM</h3>
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
