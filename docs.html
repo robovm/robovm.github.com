@@ -13,6 +13,8 @@ section: docs
           <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
           <ul class="nav nav-list">
             <li><a href="#install"><i class="icon-chevron-right"></i> Installation instructions</a></li>
+            <li><a href="#console-example"><i class="icon-chevron-right"></i> Your first RoboVM program</a></li>
+            <li><a href="#ios-example"><i class="icon-chevron-right"></i> A simple iOS app</a></li>
           </ul>
         </li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
@@ -106,6 +108,7 @@ rm -rf ~/.robovm/cache
 
         </section>
 
+        <section id="console-example">
         <h2>Your first RoboVM program</h2>
 
         <p>
@@ -178,6 +181,9 @@ HelloWorld/HelloWorld
           file system.
         </p>
 
+        </section>
+
+        <section id="ios-example">
         <h2>A simple iOS app</h2>
 
         <p>
@@ -239,7 +245,7 @@ javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/rob
 <pre>
 /opt/robovm/bin/robovm -verbose -arch x86 -os ios -cp /opt/robovm/lib/robovm-objc.jar:/opt/robovm/lib/robovm-cocoatouch.jar:classes/ -run IOSDemo
 </pre>
-
+        </section>
 
       </section>
 
