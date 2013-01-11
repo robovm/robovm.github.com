@@ -94,7 +94,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .alert-info code {
     color: #772953;
 }
-
+pre.prettyprint {
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
 footer {
   margin-top: 50px;
   text-align: center;
