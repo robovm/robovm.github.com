@@ -95,7 +95,7 @@ section: docs
           create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
-        <pre>
+        <pre class="prettyprint">
           public class HelloWorld {
               public static void main(String[] args) {
                   System.out.println("Hello world!");
@@ -129,9 +129,8 @@ section: docs
         </div>
 
         <p>
-          You should now have a folder called <code>HelloWorld</code> with a 
-          <code>HelloWorld</code> in it. Running <code>HelloWorld/HelloWorld</code> 
-          should print:</p>
+          You should now have a native executable in <code>HelloWorld/HelloWorld</code>. 
+          Running it should print:</p>
         <pre>
           Hello world!
         </pre>
@@ -160,6 +159,14 @@ section: docs
           why the jar files are included by stripped is to make it possible to 
           store property files, images, etc in the classpath rather than in the
           file system.
+        </p>
+
+        <h2>A simple iOS app</h2>
+
+        <p>
+          While it's nice to be able to make native console programs like we did above
+          the main goal of RoboVM is to make it possible to develop iOS apps in Java.
+          Let's make a very simple iOS app. Put the following into <code>IOSDemo.java</code>:
         </p>
 
       </section>
