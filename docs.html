@@ -171,6 +171,61 @@ HelloWorld/HelloWorld
           Let's make a very simple iOS app. Put the following into <code>IOSDemo.java</code>:
         </p>
 
+<pre class="prettyprint">
+import org.robovm.cocoatouch.coregraphics.*;
+import org.robovm.cocoatouch.foundation.*;
+import org.robovm.cocoatouch.uikit.*;
+
+public class IOSDemo extends UIApplicationDelegate.Adapter {
+
+    private UIWindow window = null;
+    private int clickCount = 0;
+
+    @Override
+    public boolean didFinishLaunching(UIApplication application,
+            NSDictionary launchOptions) {
+  
+        final UIButton button = UIButton.fromType(UIButtonType.RoundedRect);
+        button.setFrame(new CGRect(115.0f, 121.0f, 91.0f, 37.0f));
+        button.setTitle("Click me!", UIControlState.Normal);
+
+        button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+            @Override
+            public void onTouchUpInside(UIControl control, UIEvent event) {
+                button.setTitle("Click #" + (++clickCount), UIControlState.Normal);
+            }
+        });
+
+        window = new UIWindow(UIScreen.getMainScreen().getBounds());
+        window.setBackgroundColor(UIColor.lightGrayColor());
+        window.addSubview(button);
+        window.makeKeyAndVisible();
+        
+        return true;
+    }
+
+    public static void main(String[] args) {
+        NSAutoreleasePool pool = new NSAutoreleasePool();
+        UIApplication.main(args, null, UITest.class);
+        pool.drain();
+    }
+}
+</pre>
+
+        <p>
+          Compile the <code>IOSDemo.java</code> using <code>javac</code>:
+        </p>
+<pre>
+mkdir classes
+javac -d classes/ IOSDemo.java
+</pre>
+
+        <p>Compile the Java bytecode into native code and launch the app using:</p>
+<pre>
+/opt/robovm/bin/robovm -verbose -arch x86 -os ios -cp classes/ -run IOSDemo
+</pre>
+
+
       </section>
 
       <section id="build">
