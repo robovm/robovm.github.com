@@ -102,6 +102,7 @@ pre.prettyprint {
 pre {
     overflow: auto;
     white-space: pre;
+    word-wrap: normal;
 }
 footer {
   margin-top: 50px;
