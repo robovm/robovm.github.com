@@ -1,0 +1,64 @@
+---
+layout: default
+title: license
+section: license
+---
+<div class="container">
+
+  <div class="row">
+    <div class="span12">
+
+      <section id="license">
+        <div class="page-header">
+          <h1>License</h1>
+        </div>
+        
+        <p>
+          One of the goals of RoboVM has been to enable the development of commercial,
+          closed-source applications. In the runtime, 3rd party libraries have been 
+          chosen carefully to avoid restricting how original source code consumed by 
+          and binaries produced by the compiler may be used and distributed.
+        </p>
+
+        <p>
+          Each sub module in the <a href="https://github.com/robovm/robovm/">GitHub repository</a> contains LICENSE.txt
+          and NOTICE.txt files. The LICENSE.txt file contains the
+          complete legal text for the license that module is released under.
+          The NOTICE.txt file contains the copyright statement for the module
+          and information on the licenses of any 3rd party dependencies used by
+          the module.
+        </p>
+
+        <h2>Compile time tools</h2>
+
+        <p>
+          The compiler and the Eclipse plug-in are GPLv2 licensed. The compiler
+          has a few 3rd party dependencies that have been released under different 
+          open source licenses. For a complete list see the 
+          <a href="https://github.com/robovm/robovm/blob/master/compiler/NOTICE.txt">compiler/NOTICE.txt</a>
+          file in the GitHub repostory.
+        </p>
+
+        <h2>Runtime libraries</h2>
+
+        <p>
+          Executables and apps produced by the compiler contain no GPLed code.
+          The runtime class libraries and the runtime native libraries which are
+          linked into the final binaries are all Apache License v2.0 licensed,
+          licensed under BSD like licenses or placed in the public domain.
+          For a complete list see the 
+          <a href="https://github.com/robovm/robovm/blob/master/vm/NOTICE.txt">vm/NOTICE.txt</a> and
+          <a href="https://github.com/robovm/robovm/blob/master/rt/NOTICE.txt">rt/NOTICE.txt</a>
+          files in the GitHub repostory.
+        </p>
+
+        <p>
+          The Objective-C bridge and CocoaTouch bindings have no external dependencies
+          and are released under the Apache License v2.0.
+        </p>
+
+      </section>
+
+    </div>
+
+</div>
