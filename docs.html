@@ -107,7 +107,7 @@ public class HelloWorld {
 </pre>
 
         <p>
-          Compile the <code>HelloWorld.java</code> using <code>javac</code>:
+          Compile <code>HelloWorld.java</code> using <code>javac</code>:
         </p>
 <pre>
 mkdir classes
@@ -206,23 +206,23 @@ public class IOSDemo extends UIApplicationDelegate.Adapter {
 
     public static void main(String[] args) {
         NSAutoreleasePool pool = new NSAutoreleasePool();
-        UIApplication.main(args, null, UITest.class);
+        UIApplication.main(args, null, IOSDemo.class);
         pool.drain();
     }
 }
 </pre>
 
         <p>
-          Compile the <code>IOSDemo.java</code> using <code>javac</code>:
+          Compile <code>IOSDemo.java</code> using <code>javac</code>:
         </p>
 <pre>
 mkdir classes
-javac -d classes/ IOSDemo.java
+javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/robovm/lib/robovm-cocoatouch.jar -d classes/ IOSDemo.java
 </pre>
 
         <p>Compile the Java bytecode into native code and launch the app using:</p>
 <pre>
-/opt/robovm/bin/robovm -verbose -arch x86 -os ios -cp classes/ -run IOSDemo
+/opt/robovm/bin/robovm -verbose -arch x86 -os ios -cp /opt/robovm/lib/robovm-objc.jar:/opt/robovm/lib/robovm-cocoatouch.jar:classes/ -run IOSDemo
 </pre>
 
 
