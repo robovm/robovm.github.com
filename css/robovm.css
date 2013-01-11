@@ -138,7 +138,7 @@ footer {
 }
 .bs-docs-sidenav > li > a {
   display: block;
-  width: 190px \9;
+  width: 190px;
   margin: 0 0 -1px;
   padding: 8px 14px;
   border: 1px solid #e5e5e5;
@@ -148,10 +148,11 @@ footer {
   padding-right: 0;
 }
 .bs-docs-sidenav > li > ul.nav.nav-list > li > a {
+  width: 190px;
   margin: 0 0 -1px;
   padding: 8px 30px;
   border: 1px solid #e5e5e5;
-  font-size: 80%;
+  font-size: 13px;
 }
 .bs-docs-sidenav > li:first-child > a {
   -webkit-border-radius: 6px 6px 0 0;
