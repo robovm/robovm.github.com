@@ -95,12 +95,13 @@ section: docs
           create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
-        bc.
-        public class HelloWorld {
-            public static void main(String[] args) {
-                System.out.println("Hello world!");
-            }
-        }
+        <pre class="prettyprint">
+          public class HelloWorld {
+          &nbsp;   public static void main(String[] args) {
+          &nbsp;        System.out.println("Hello world!");
+          &nbsp;    }
+          }
+        </pre>
 
         <p>
           Compile the <code>HelloWorld.java</code> using <code>javac</code>:
