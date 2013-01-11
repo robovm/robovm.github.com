@@ -95,14 +95,12 @@ section: docs
           create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
-        <pre class="prettyprint">
         bc.
-          public class HelloWorld {
-              public static void main(String[] args) {
-                  System.out.println("Hello world!");
-              }
-          }
-        </pre>
+        public class HelloWorld {
+            public static void main(String[] args) {
+                System.out.println("Hello world!");
+            }
+        }
 
         <p>
           Compile the <code>HelloWorld.java</code> using <code>javac</code>:
@@ -130,7 +128,7 @@ section: docs
         </div>
 
         <p>
-          You should now have a native executable in <code>HelloWorld/HelloWorld</code>. 
+          You should now have a native executable called <code>HelloWorld/HelloWorld</code>. 
           Running it should print:</p>
         <pre>
           Hello world!
@@ -147,7 +145,10 @@ section: docs
           This is the final product for this simple console program. Since we
           didn't specify a CPU or OS to the <code>/opt/robovm/bin/robovm</code>
           command the compiler will produce a binary which can be run on the 
-          current system (either Linux or Mac OS X). The jar files in 
+          current system (either Linux or Mac OS X).
+        </p>
+        <p>
+          The jar files in 
           <code>HelloWorld/lib/boot/</code> are the jar files which were
           specified using the <code>-bootclasspath</code> command line argument.
           Since we didn't specify anything RoboVM will add <code>robovm-rt.jar</code> for us.
