@@ -90,7 +90,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     border: none;
     padding: 0;
     background: transparent;
-    color: #333;
+}
+.alert-info code {
+    color: #772953;
 }
 
 footer {
