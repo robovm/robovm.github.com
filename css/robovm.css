@@ -143,6 +143,11 @@ footer {
   padding: 8px 14px;
   border: 1px solid #e5e5e5;
 }
+.bs-docs-sidenav > li > ul.nav.nav-list > li > a {
+  border: 1px solid #e5e5e5;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+}
 .bs-docs-sidenav > li:first-child > a {
   -webkit-border-radius: 6px 6px 0 0;
      -moz-border-radius: 6px 6px 0 0;
