@@ -8,22 +8,30 @@ section: docs
   <div class="row">
     <div class="span3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav">
-        <!-- <li><a href="#about"><i class="icon-chevron-right"></i> About</a></li> -->
-        <li><a href="#install"><i class="icon-chevron-right"></i> Installation instructions</a></li>
+        <li><a href="#intro"><i class="icon-chevron-right"></i> Introduction</a></li>
+        <li><a href="#getting-started"><i class="icon-chevron-right"></i> Get Started</a></li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
         <li><a href="#license"><i class="icon-chevron-right"></i> License</a></li>
       </ul>
     </div>
     <div class="span9">
 
-      <section id="install">
+      <section id="intro">
         <div class="page-header">
-          <h1>Installation instructions</h1>
+          <h1>Introduction</h1>
+        </div>
+      </section>
+
+      <section id="getting-started">
+        <div class="page-header">
+          <h1>Getting started</h1>
         </div>
 
-        <h2>Installing the RoboVM compiler dependencies</h2>
+        <h2>Installation instructions</h2>
 
-        <p>The RoboVM compiler needs the following tools to be installed on your system:</p>
+        <h3>RoboVM compiler dependencies</h3>
+
+        <p>The RoboVM compiler requires the following tools to be installed on your system:</p>
 
         * Java JDK 6 or newer - "Oracle's JDK":http://www.oracle.com/technetwork/java/javase/downloads/index.html or "OpenJDK":http://openjdk.java.net should work
         * "LLVM 3.2":http://llvm.org/releases
@@ -64,7 +72,7 @@ section: docs
           sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
         </pre>
 
-        <h2>Installing RoboVM</h2>
+        <h3>Installing RoboVM</h3>
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
 
@@ -79,6 +87,80 @@ section: docs
         <pre>
           rm -rf ~/.robovm/cache
         </pre>
+
+        <h2>Your first RoboVM program</h2>
+
+        <p>
+          Now let's compile a simple Java program into a native executable using RoboVM. First
+          create <code>HelloWorld.java</code> in a new folder with the following contents:
+        </p>
+
+        <pre>
+          public class HelloWorld {
+              public static void main(String[] args) {
+                  System.out.println("Hello world!");
+              }
+          }
+        </pre>
+
+        <p>
+          Compile the <code>HelloWorld.java</code> using <code>javac</code>:
+        </p>
+        <pre>
+          mkdir classes
+          javac -d classes/ HelloWorld.java
+        </pre>
+
+        <p>Finally, compile the Java bytecode into native code using:</p>
+        <pre>
+          /opt/robovm/bin/robovm -verbose -cp classes/ HelloWorld
+        </pre>
+
+        <div class="alert alert-info">
+          <strong>Note!</strong> When you compile a program using RoboVM it will
+          translate not only the main class into native code but also the 
+          transitive dependencies of that main class. So the first time you compile
+          a program for a particular CPU and OS RoboVM also compiles many
+          of the standard runtime classes such as <code>java.lang.Object</code>,
+          <code>java.lang.String</code>, etc. A simple class like <code>HelloWorld</code>
+          references about 1500 classes directly or indirectly. RoboVM keeps a cache
+          of compiled classes and only recompiles a class when it or any of its 
+          direct dependencies have changed.
+        </div>
+
+        <p>
+          You should now have a folder called <code>HelloWorld</code> with a 
+          <code>HelloWorld</code> in it. Running <code>HelloWorld/HelloWorld</code> 
+          should print:</p>
+        <pre>
+          Hello world!
+        </pre>
+
+        <p>Let's take a quick peek at the contents of the <code>HelloWorld</code> folder:</p>
+        <pre>
+          HelloWorld/lib/boot/robovm-rt.jar
+          HelloWorld/lib/classes0.jar
+          HelloWorld/HelloWorld
+        </pre>
+
+        <p>
+          This is the final product for this simple console program. Since we
+          didn't specify a CPU or OS to the <code>/opt/robovm/bin/robovm</code>
+          command the compiler will produce a binary which can be run on the 
+          current system (either Linux or Mac OS X). The jar files in 
+          <code>HelloWorld/lib/boot/</code> are the jar files which were
+          specified using the <code>-bootclasspath</code> command line argument.
+          Since we didn't specify anything RoboVM will add <code>robovm-rt.jar</code> for us.
+          The jar files directly in <code>HelloWorld/lib</code> are the jar files
+          specified using <code>-cp</code> argument. If one specifies a path (like we did) 
+          rather than a jar file RoboVM will archive the contents of that path
+          in a jar file and call it <code>classes0.jar</code> (subsequent paths 
+          will be archived to <code>classes1.jar</code>, <code>classes2.jar</code>, etc).
+          The jar files will be stripped from <code>.class</code> files. The reason
+          why the jar files are included by stripped is to make it possible to 
+          store property files, images, etc in the classpath rather than in the
+          file system.
+        </p>
 
       </section>
 
@@ -135,7 +217,7 @@ section: docs
           mvn -DskipTests=true clean install
         </pre>
 
-        <p>You should now have a tar.gz package in dist/target that you can install using the <a href="#install">instructions</a> above.</p>
+        <p>You should now have a tar.gz package in dist/target that you can install using the <a href="#getting-started">instructions</a> above.</p>
 
       </section>
 
