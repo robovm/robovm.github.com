@@ -9,7 +9,12 @@ section: docs
     <div class="span3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav">
         <li><a href="#intro"><i class="icon-chevron-right"></i> Introduction</a></li>
-        <li><a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a></li>
+        <li>
+          <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
+          <ul>
+            <li><a href="#install"><i class="icon-chevron-right"></i> Installation instructions</a></li>
+          </ul>
+        </li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
         <li><a href="#license"><i class="icon-chevron-right"></i> License</a></li>
       </ul>
@@ -27,6 +32,7 @@ section: docs
           <h1>Getting started</h1>
         </div>
 
+        <section id="install">
         <h2>Installation instructions</h2>
 
         <h3>RoboVM compiler dependencies</h3>
@@ -97,6 +103,8 @@ sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
 <pre>
 rm -rf ~/.robovm/cache
 </pre>
+
+        </section>
 
         <h2>Your first RoboVM program</h2>
 
