@@ -235,3 +235,10 @@ footer {
     top: 0;
   }
 }
+
+.ticker, .ticker-wrapper, .ticker-title {
+  background-color: transparent;  
+}
+.ticker-title {
+  padding-top: 5px;
+}
