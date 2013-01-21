@@ -236,7 +236,7 @@ footer {
   }
 }
 
-.ticker, .ticker-wrapper, .ticker-wrapper.has-js, .ticker-title {
+.ticker, .ticker-wrapper, .ticker-wrapper.has-js, .ticker-title, .ticker-content {
   font-size: 11px;
   background-color: transparent;  
 }
@@ -244,5 +244,5 @@ footer {
   font-size: 11px;
 }
 .ticker-title {
-  padding-top: 5px;
+  padding-top: 1px;
 }
