@@ -55,7 +55,8 @@ section: front
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.robovm.org" data-via="robovm" data-count="none">Tweet</a>
       </li>
       <li>
-        <iframe src="//www.facebook.com/plugins/like.php?href=www.facebook.com/robovm&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+<!--        <iframe src="//www.facebook.com/plugins/like.php?href=www.facebook.com/robovm&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe> -->
+        <fb:like href="http://www.facebook.com/robovm" send="true" layout="button_count" width="90" show_faces="false"></fb:like>
       </li>
       <li>
         <g:plusone href="http://www.robovm.org"></g:plusone>
@@ -95,6 +96,14 @@ section: front
   </div>
 
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
   <script type="text/javascript">
     $(function () {
