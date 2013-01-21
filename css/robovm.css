@@ -236,16 +236,19 @@ footer {
   }
 }
 
-.news-ticker {
-  position: relative;
+#news-ticker {
+  font-size: 10px;
+  width: 100%;
+  text-align: right;
 }
-.ticker, .ticker-wrapper, .ticker-wrapper.has-js, .ticker-title, .ticker-content, .ticker-swipe {
-  font-size: 11px;
-  background-color: transparent;  
+.news-ticker-title {
+  font-weight: bold;
+  padding-right: 10px;
 }
-.ticker a {
-  font-size: 11px;
-}
-.ticker-title {
-  padding-top: 1px;
+.news-ticker-content {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
