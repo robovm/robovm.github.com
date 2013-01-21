@@ -262,14 +262,20 @@ javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/rob
 
         <p>
           After the plug-in has been installed and Eclipse has been restarted we can
-          create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; 
-          RoboVM Cocoa Touch Project</em>. Give the new project a name and leave all 
-          other settings at their defaults.
+          create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; Project...</em>.
+          Select the <em>RoboVM &rarr; RoboVM Cocoa Touch Project</em> project type. Give the new 
+          project a name and leave all other settings at their defaults.
         </p>
+
         <p>
-          Create a new class and call it <code>IOSDemo</code> with no package name. 
+          Create a new class (<em>File &rarr; New &rarr; Class</em>) and call it <code>IOSDemo</code> with no package name. 
           Copy the <code>IOSDemo.java</code> code from the <a href="#ios-example">section above</a>
           and paste it into the editor replacing whatever Eclipse auto generated for you.
+        </p>
+
+        <p>
+          Finally, launch the app in the iOS simulator by right clicking the <code>IOSDemo</code> class
+          in the package explorer and select <em>Run As... &rarr; iOS Simulator App</em>.
         </p>
 
         </section>
