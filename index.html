@@ -6,19 +6,15 @@ section: front
 
 <div class="container">
 
+  <div id="news-ticker">
+    <div class="news-ticker-content"></div>
+  </div>
+
   <div class="hero-unit">
     <div class="row">
       <div class="span7">
         <h1>RoboVM</h1>
         <p>Develop iPhone and iPad Apps in Java with RoboVM</p>
-        <div class="news-ticker">
-          <ul id="js-news" class="js-hidden">
-            <li class="news-item"><a href="#">This is the 1st latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 2nd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
-          </ul>
-        </div>
       </div>
       <div class="span3 get-started">
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz" class="btn btn-primary btn-large">Download&nbsp;&raquo;</a></p>
@@ -107,14 +103,12 @@ section: front
             }
           });
         }
+        function newsTicker(entries, index) {
+          $('#news-ticker-content').html('<a href="' + entries[i].link + '">' + entries[i].title + '</a>');
+        }
         parseRSS('http://blog.robovm.org/feeds/posts/default?alt=rss', function (feed) {
-          console.log(feed);
-        });
-
-        $('#js-news').ticker({
-          controls: false, 
-          titleText: 'Latest news',
-          displayType: 'fade'
+          var entries = feed.entries;
+          newsTicker(entries, 0);
         });
     });
   </script>
