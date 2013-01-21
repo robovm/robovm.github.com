@@ -104,7 +104,7 @@ section: front
           });
         }
         function newsTicker(entries, index) {
-          $('#news-ticker-content').html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>');
+          $('.news-ticker-content').html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>');
         }
         parseRSS('http://blog.robovm.org/feeds/posts/default?alt=rss', function (feed) {
           var entries = feed.entries;
