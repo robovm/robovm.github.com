@@ -6,8 +6,8 @@ section: front
 
 <div class="container">
 
-  <div id="news-ticker" style="opacity: 0.0;">
-    <div class="news-ticker-content">FOO BAR</div>
+  <div id="news-ticker">
+    <span class="news-ticker-title">NEWS</span><span class="news-ticker-content"></span>
   </div>
 
   <div class="hero-unit">
@@ -104,12 +104,13 @@ section: front
           });
         }
         function newsTicker(entries, index) {
+          $('.news-ticker-content')[0].style.opacity = 0.0;
           $('.news-ticker-content')
             .html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>');
-          $('#news-ticker')
+          $('.news-ticker-content')
             .fadeIn(function () {
               window.setTimeout(function () {
-                $('#news-ticker').fadeOut(function () {
+                $('.news-ticker-content').fadeOut(function () {
                   newsTicker(entries, (index + 1) % entries.length);
                 });
               }, 3000);
