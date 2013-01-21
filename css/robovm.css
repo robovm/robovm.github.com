@@ -247,6 +247,7 @@ footer {
 .news-ticker-title {
   font-weight: bold;
   padding-right: 10px;
+  vertical-align: top;
 }
 .news-ticker-content {
   text-align: left;
@@ -255,4 +256,5 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  vertical-align: top;
 }
