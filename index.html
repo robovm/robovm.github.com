@@ -85,4 +85,18 @@ section: front
   </div>
 
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript">
+    function parseRSS(url, callback) {
+      $.ajax({
+        url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+        dataType: 'json',
+        success: function(data) {
+          callback(data.responseData.feed);
+        }
+      });
+    }
+    parseRSS('http://blog.robovm.org/feeds/posts/default?alt=rss', function (feed) {
+      console.log(feed);
+    });
+  </script>
 </div>
