@@ -7,7 +7,7 @@ section: front
 <div class="container">
 
   <div id="news-ticker">
-    <div class="news-ticker-content" style="opacity: 0;"></div>
+    <div class="news-ticker-content"></div>
   </div>
 
   <div class="hero-unit">
@@ -105,10 +105,13 @@ section: front
         }
         function newsTicker(entries, index) {
           $('.news-ticker-content')
-            .html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>')
+            .html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>');
+          $('#news-ticker')
             .fadeIn(function () {
               window.setTimeout(function () {
-                
+                $('#news-ticker').fadeOut(function () {
+                  newsTicker(entries, (index + 1) % entries.length);
+                });
               }, 3000);
             });
         }
