@@ -258,3 +258,7 @@ footer {
   text-overflow: ellipsis;
   vertical-align: top;
 }
+
+#like-fb iframe {
+  margin-top: -3px;
+}
