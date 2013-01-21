@@ -240,6 +240,9 @@ footer {
   font-size: 14px;
   background-color: transparent;  
 }
+.ticker a {
+  font-size: 14px;
+}
 .ticker-title {
   padding-top: 5px;
 }
