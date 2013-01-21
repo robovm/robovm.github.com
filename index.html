@@ -105,7 +105,7 @@ section: front
         }
         function newsTicker(entries, index) {
           $('.news-ticker-content')
-            .html('<a href="' + entries[index].link + '">' + entries[index].title + '</a>');
+            .html('<a href="' + entries[index].link + '" target="_blank">' + entries[index].title + '</a>');
           $('.news-ticker-content')
             .fadeIn(function () {
               window.setTimeout(function () {
