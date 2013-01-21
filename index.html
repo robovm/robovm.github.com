@@ -98,7 +98,13 @@ section: front
   <script src="js/jquery.ticker.js" type="text/javascript"></script>
   <script type="text/javascript">
       $(function () {
-          $('#js-news').ticker({controls: false, titleText: 'Latest news', displayTypeee: 'fade'});
+          $('#js-news').ticker({
+            controls: false, 
+            titleText: 'Latest news', 
+            htmlFeed: false,
+            ajaxFeed: true,
+            feedUrl: 'http://blog.robovm.org/feeds/posts/default?alt=rss'
+          });
       });
   </script>  
   <script type="text/javascript">
