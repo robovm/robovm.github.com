@@ -13,7 +13,7 @@ section: contribute
         <li><a href="#report-a-bug"><i class="icon-chevron-right"></i> Report a bug</a></li>
         <li><a href="#patches"><i class="icon-chevron-right"></i> Code contributions</a></li>
         <li><a href="#website"><i class="icon-chevron-right"></i> Web site contributions</a></li>
-        <li><a href="#cla"><i class="icon-chevron-right"></i> Contributors License Agreement</a></li>
+        <li><a href="#cla"><i class="icon-chevron-right"></i> Contributor License Agreement</a></li>
       </ul>
     </div>
 
@@ -39,7 +39,7 @@ section: contribute
         <div class="alert alert-info alert-block">
           <h4>Important!</h4>
           Before we can accept your code contributions you must sign and submit
-          a <a href="#cla">Contributors License Agreement</a>.
+          a <a href="#cla">Contributor License Agreement</a>.
         </div>
 
         <p>
@@ -86,24 +86,23 @@ section: contribute
 
       <section id="cla">
         <div class="page-header">
-          <h1>Contributors License Agreement</h1>
+          <h1>Contributor License Agreement</h1>
         </div>
 
+        <p> 
+          We request that all contributors of ideas, code, or documentation to
+          the RoboVM project complete, sign, and submit an <a href="http://download.robovm.org/cla/RoboVM-ICLA.pdf">Individual Contributor License
+          Agreement</a> (CLA). The purpose of this agreement is to clearly define the terms
+          under which intellectual property has been contributed to the project.
+        </p>
         <p>
-          The Contributors License Agreement comes in two flavors, one for 
-          <a href="http://download.robovm.org/cla/RoboVM-HA-CLA-I-ANY.pdf">individual contributors</a>
-          and one for <a href="http://download.robovm.org/cla/RoboVM-HA-CLA-E-ANY.pdf">entities</a>
-          (companies, foundations, or other organizations). Print it, sign it
-          and scan it (or use a camera to photograph it) and e-mail it to 
+          For a corporation that has assigned employees to work on RoboVM, a <a href="http://download.robovm.org/cla/RoboVM-CCLA.pdf">Corporate CLA</a> (CCLA) is available for contributing intellectual property via the corporation, that may have been assigned as part of an employment agreement. Note that a Corporate CLA does not remove the need for every developer to sign their own CLA as an individual, to cover any of their contributions which are not owned by the corporation signing the CCLA.
+        </p>
+        <p>
+          Print the CLA, sign it and scan it (or use a camera to photograph it) and e-mail it to 
           <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a>. Include
           your GitHub user name in the e-mail.
         </p>
-
-        <p>
-          If you are making a contribution that is not your work (for example, a 
-          patch or library written by someone else), please contact 
-          <a href="mailto:robovm(at)robovm.org">robovm(at)robovm.org</a> for 
-          guidance on whether any additional steps are needed.
         </div>
       </section>
 
