@@ -335,6 +335,7 @@ sudo dpkg -i cmake*.deb
 git clone https://github.com/robovm/robovm.git
 cd robovm/vm
 ./build.sh
+./copy-binaries.sh
 cd ..
 mvn -DskipTests=true clean install
 </pre>
