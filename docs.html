@@ -49,21 +49,21 @@ section: docs
           <li><a href="http://llvm.org/releases">LLVM 3.2</a></li>
           <li>An assembler - GCC (on Linux) and clang (on Mac OS X) are used as assembler frontends</li>
           <li>A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends</li>
-          <li>Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.5.2 installed</li>
+          <li>Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.6.2 installed</li>
         </ul>
 
         <h4>Mac OS X</h4>
 
         <p>Download and install Java SE JDK 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>.</p>
 
-        <p>Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.5.2 from the Mac App Store</a>. It includes clang and and the iOS simulator. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the <em>Xcode &rarr; Preferences...</em> menu.</p>
+        <p>Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.2 from the Mac App Store</a>. It includes clang and and the iOS simulator.</p>
 
         <p>Download and install the LLVM tools to /opt/llvm by running the following commands in a terminal:</p>
         
 <pre>
-curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz > llvm.tar.gz
+curl -O http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz
 sudo mkdir -p /opt
-sudo tar xvfz llvm.tar.gz -C /opt
+sudo tar xvfz clang+llvm-3.2-x86_64-apple-darwin11.tar.gz -C /opt
 sudo rm -f /opt/llvm
 sudo ln -s /opt/clang+llvm-3.2-x86_64-apple-darwin11 /opt/llvm
 </pre>
@@ -79,8 +79,8 @@ sudo apt-get install build-essential gcc-multilib openjdk-7-jdk
         <p>Download and install the LLVM tools to /opt/llvm:</p>
 
 <pre>
-curl http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz > llvm.tar.gz
-sudo tar xvfz llvm.tar.gz -C /opt
+curl -O http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz
+sudo tar xvfz clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz -C /opt
 sudo rm -f /opt/llvm
 sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
 </pre>
@@ -288,59 +288,9 @@ javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/rob
           <h1>Building from source</h1>
         </div>
 
-        <h2>Build prerequisites</h2>
-
-        In order to get the source code and build RoboVM you will need the following tools:
-
-        <ul>
-          <li><a href="http://git-scm.com">Git</a></li>
-          <li><a href="http://www.cmake.org">CMake 2.8.8 or newer</a></li>
-          <li>Java JDK 6 or newer - <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle's JDK</a> 
-            or <a href="http://openjdk.java.net">OpenJDK</a> should work</li>
-          <li><a href="http://maven.apache.org">Maven 3</a></li>
-          <li>C/C++ compiler - GCC on Linux, clang on Mac OS X</li>
-        </ul>
-
-        <h4>Mac OS X</h4>
-        
-        <p>Download and install Java SE JDK 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>.</p>
-
-        <p>Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.5.2 from the Mac App Store</a>. It includes clang. Once installed start Xcode and install the "Command Line Tools" component from the Downloads section under the <em>Xcode &rarr; Preferences...</em> menu.</p>
-
-        <p>Download and install CMake.</p>
-        
-        <p>Get Maven from the URL above and install it.</p>
-
-        <h4>Ubuntu 12.04 (AMD64)</h4>
-
-        <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
-
-<pre>
-sudo apt-get install build-essential gcc-multilib git openjdk-7-jdk maven
-</pre>
-
-        <p>The cmake version in Ubuntu 12.04 is too old so we use the version from Ubuntu 12.10:</p>
-
-<pre>
-wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_2.8.9-0ubuntu1_amd64.deb
-wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_2.8.9-0ubuntu1_all.deb
-sudo dpkg -i cmake*.deb
-</pre>
-
-        <h2>Building RoboVM</h2>
-
-        <p>Run the following commands in a terminal to build RoboVM:</p>
-
-<pre>
-git clone https://github.com/robovm/robovm.git
-cd robovm/vm
-./build.sh
-./copy-binaries.sh
-cd ..
-mvn -DskipTests=true clean install
-</pre>
-
-        <p>You should now have a tar.gz package in dist/target that you can install using the <a href="#getting-started">instructions</a> above.</p>
+        <p>
+          Please see the <a href="https://github.com/robovm/robovm/wiki/Hacking-on-RoboVM">GitHub project wiki</a> for build instructions.
+        </p>
 
       </section>
 
