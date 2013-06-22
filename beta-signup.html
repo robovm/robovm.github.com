@@ -4,11 +4,6 @@ title: beta-signup
 section: beta-signup
 ---
 
-<style media="screen" type="text/css">
-    .defaultText {}
-    .defaultTextActive { color: #a1a1a1; font-style: italic; }
-</style>
-
 <div class="container">
 
   <div class="hero-unit">
@@ -30,37 +25,10 @@ section: beta-signup
           the latest alpha build today</a>.
         </p>
         <form class="form-inline">
-          <input type="text" placeholder="Your e-mail address"/><button type="submit" class="btn">Sign up</button>
+          <input type="text" placeholder="Your e-mail address"/><button type="submit" class="btn btn-primary">Sign up</button>
         </form>
       </div>
     </div>
   </div>
 
 </div>
-
-<script language="javascript">
-<!--
-$(document).ready(function()
-{
-    $(".defaultText").focus(function(srcc)
-    {
-        if ($(this).val() == $(this)[0].title)
-        {
-            $(this).removeClass("defaultTextActive");
-            $(this).val("");
-        }
-    });
-    
-    $(".defaultText").blur(function()
-    {
-        if ($(this).val() == "")
-        {
-            $(this).addClass("defaultTextActive");
-            $(this).val($(this)[0].title);
-        }
-    });
-    
-    $(".defaultText").blur();        
-});
-//-->
-</script>
