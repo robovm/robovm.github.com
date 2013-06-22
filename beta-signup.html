@@ -48,11 +48,11 @@ section: beta-signup
     $("#entry_229880151").keyup(function (){
       $("#ss-submit").prop("disabled", !isValidEmailAddress(this.value));
     });
-    function submitForm() {
-      $("#beta-signup-target").addClass("submitted");
-      $("#beta-signup-form").submit();
-    }
   });
+  function submitForm() {
+    $("#beta-signup-target").addClass("submitted");
+    $("#beta-signup-form").submit();
+  }
   function isValidEmailAddress(emailAddress) {
     return emailPattern.test(emailAddress);
   };
