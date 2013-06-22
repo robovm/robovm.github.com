@@ -25,11 +25,12 @@ section: beta-signup
           Please <strong>sign up below</strong> to get notified when RoboVM enters beta or <a href="/">try out
           the latest alpha build today</a>.
         </p>
-        <form class="form-inline" action="https://docs.google.com/a/therning.org/forms/d/1k8FO18Q5UviYrnTOU520wT5gile3ekgMWlW61JyNGI4/formResponse" method="POST" target="beta-signup-target">
+        <form id="beta-signup-form" class="form-inline" action="https://docs.google.com/a/therning.org/forms/d/1k8FO18Q5UviYrnTOU520wT5gile3ekgMWlW61JyNGI4/formResponse" method="POST" target="beta-signup-target">
           <input id="entry_229880151" type="text" name="entry.229880151" placeholder="Your e-mail address"/> <button type="submit" id="ss-submit" name="submit" class="btn btn-primary">Sign up</button>
           <input type="hidden" name="draftResponse" value="[]">
           <input type="hidden" name="pageHistory" value="0">
         </form>
+        <p id="thank-you" style="display: none;">Thank you!</p>
       </div>
     </div>
   </div>
@@ -39,7 +40,8 @@ section: beta-signup
 <script type="text/javascript">
   $(document).ready(function() {
     $("#beta-signup-target").load(function (){
-      console.log("loaded!");
+      $("#beta-signup-form").hide();
+      $("#thank-you").show();
     });
   });
 </script>
