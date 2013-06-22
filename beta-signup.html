@@ -44,6 +44,10 @@ section: beta-signup
       $("#beta-signup-form").hide();
       $("#thank-you").show();
     });
+    $("#entry_229880151").keyup(function (){
+      console.log(this.value);
+      $(this).prop("disabled", !isValidEmailAddress(this.value));
+    });
   });
   function isValidEmailAddress(emailAddress) {
     return emailPattern.test(emailAddress);
