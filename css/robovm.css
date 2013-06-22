@@ -264,10 +264,11 @@ footer {
 }
 
 .hero-unit .beta-signup {
-    float: right;
-    margin-top: 35px;
-    font-size: 15px;
+  position: absolute;
+  float: right;
+  margin-top: 35px;
+  font-size: 15px;
 }
 .hero-unit .beta-signup strong {
-    font-size: 18px;
+  font-size: 18px;
 }
