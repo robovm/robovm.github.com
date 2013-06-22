@@ -264,9 +264,7 @@ footer {
 }
 
 .hero-unit .beta-signup {
-  position: absolute;
-  float: right;
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 15px;
 }
 .hero-unit .beta-signup strong {
