@@ -4,7 +4,7 @@ title: beta-signup
 section: beta-signup
 ---
 
-<iframe name="beta-signup-target" width="0" height="0"></iframe>
+<iframe name="beta-signup-target" id="beta-signup-target" width="0" height="0"></iframe>
 <div class="container">
 
   <div class="hero-unit">
@@ -35,3 +35,11 @@ section: beta-signup
   </div>
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#beta-signup-target").load(function (){
+      console.log("loaded!");
+    });
+  });
+</script>
