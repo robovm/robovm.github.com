@@ -27,7 +27,7 @@ background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,r
 background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(226,213,208,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2d5d0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-    font-size: 25px;
+    font-size: 20px;
 }
 .hero-unit h1 {
     font-size: 75px;
@@ -264,9 +264,12 @@ footer {
 }
 
 .hero-unit .beta-signup {
-  margin-top: 25px;
+  margin-top: 15px;
   font-size: 15px;
 }
 .hero-unit .beta-signup strong {
   font-size: 18px;
+}
+.hero-unit .beta-signup p {
+  margin: 0 0 20px;
 }
