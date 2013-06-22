@@ -30,7 +30,7 @@ section: beta-signup
           <input type="hidden" name="draftResponse" value="[]">
           <input type="hidden" name="pageHistory" value="0">
         </form>
-        <p id="thank-you" style="display: none;"><strong>Thank you for signing up!</strong></p>
+        <p id="thank-you" style="display: none;"><strong>Thank you for signing up!</strong> We'll be in touch.</p>
       </div>
     </div>
   </div>
@@ -45,7 +45,6 @@ section: beta-signup
       $("#thank-you").show();
     });
     $("#entry_229880151").keyup(function (){
-      console.log(this.value);
       $("#ss-submit").prop("disabled", !isValidEmailAddress(this.value));
     });
   });
