@@ -41,10 +41,23 @@ section: docs
             The RoboVM for Eclipse plugin is known to work with Eclipse 4.2 (Juno) and later.
           </p>
 
-          <h3>Mac OS X</h3>
-          <p>
-            Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a>
-          </p>
+          <h3>Requirements</h3>
+          <ul>
+            <li>Eclipse 4.2 (Juno) or later.</li>
+            <li>Mac OS X: Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a>
+            </li>
+            <li>
+              Ubuntu 12.04:
+<pre>
+sudo apt-get install build-essential g++-multilib
+</pre>
+        <p>Download an ICU data file and place it in /usr/share/icu:</p>
+<pre>
+sudo mkdir -p /usr/share/icu
+sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
+</pre>
+            </li>
+          </ul>
 
           <h3>Ubuntu 12.04</h3>
 <pre>
