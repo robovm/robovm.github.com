@@ -37,9 +37,9 @@ section: docs
         <section id="eclipse">
           <h2>Eclipse</h2>
 
-          <div class="alert alert-info">
+          <p>
             The RoboVM for Eclipse plugin is known to work with Eclipse 4.2 (Juno) and later.
-          </div>
+          </p>
 
           <h3>Mac OS X</h3>
           <p>
@@ -58,21 +58,16 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
 
           <h3>Get the plugin</h3>
           <p>
-            In Eclipse, go to <em>Help &rarr; Install New Software</em>, and paste the URL below into 
-            the dialog box. Select the <em>RoboVM for Eclipse</em> feature and click <em>Next</em>
-            and follow the instructions.
+            Install the <em>RoboVM for Eclipse</em> plugin from the following update site:
           </p>
           <pre>http://download.robovm.org/eclipse/</pre>
           <p>
-            After the plugin has been installed and Eclipse has been restarted we can
-            create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; Project...</em>.
-            Select the <em>RoboVM &rarr; RoboVM Cocoa Touch Project</em> project type. Enter 
+            Create a new <em>RoboVM Cocoa Touch Project</em> project. Enter 
             <code>IOSDemo</code> as project name, app name and main class. Enter <code>org.robovm.IOSDemo</code> 
             as app id.
           </p>
           <p>
-            Create a new class (<em>File &rarr; New &rarr; Class</em>) and call it <code>IOSDemo</code> with 
-            no package name. Copy and paste the code below into the newly created file replacing whatever Eclipse auto generated for you.
+            Create a new class and call it <code>IOSDemo</code> with no package name. Copy and paste the code below into the newly created file replacing whatever Eclipse auto generated for you.
           </p>
 <pre class="prettyprint">
 {% include IOSDemo.java %}
@@ -107,7 +102,7 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
 
         <h3>Installing RoboVM</h3>
 
-        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> and unpack it somewhere in your home folder:</p>
+        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> and unpack it somewhere in your home folder.</p>
 
         </section>
 
