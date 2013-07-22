@@ -8,14 +8,12 @@ section: docs
   <div class="row">
     <div class="span3 bs-docs-sidebar">
       <ul class="nav nav-list bs-docs-sidenav">
-        <li><a href="#intro"><i class="icon-chevron-right"></i> Introduction</a></li>
+        <!-- <li><a href="#intro"><i class="icon-chevron-right"></i> Introduction</a></li> -->
         <li>
-          <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
+          <a href="#quick-start"><i class="icon-chevron-right"></i> Quick start</a>
           <ul class="nav nav-list">
-            <li><a href="#install"><i class="icon-chevron-right"></i> Installation instructions</a></li>
-            <li><a href="#console-example"><i class="icon-chevron-right"></i> Your first RoboVM program</a></li>
-            <li><a href="#ios-example"><i class="icon-chevron-right"></i> A simple iOS app</a></li>
-            <li><a href="#eclipse-example"><i class="icon-chevron-right"></i> Using the Eclipse plug-in</a></li>
+            <li><a href="#eclipse"><i class="icon-chevron-right"></i> Using Eclipse</a></li>
+            <li><a href="#cmdline"><i class="icon-chevron-right"></i> Using the command line</a></li>
           </ul>
         </li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
@@ -23,69 +21,84 @@ section: docs
     </div>
     <div class="span9">
 
-      <section id="intro">
+<!--      <section id="intro">
         <div class="page-header">
           <h1>Introduction</h1>
         </div>
 
         <p>To be written...</p>
-      </section>
+      </section> -->
 
-      <section id="getting-started">
+      <section id="quick-start">
         <div class="page-header">
-          <h1>Getting started</h1>
+          <h1>Quick start</h1>
         </div>
 
-        <section id="install">
-        <h2>Installation instructions</h2>
+        <section id="eclipse">
+          <h2>Eclipse</h2>
 
-        <h3>RoboVM compiler dependencies</h3>
+          <div class="alert alert-info">
+            The RoboVM for Eclipse plugin is known to work with Eclipse 4.2 (Juno) and later.
+          </div>
 
-        <p>The RoboVM compiler requires the following tools to be installed on your system:</p>
+          <h3>Mac OS X</h3>
+          <p>
+            Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a>
+          </p>
 
-        <ul>
-          <li>Java JDK 6 or newer - <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle's JDK</a> 
-            or <a href="http://openjdk.java.net should work">OpenJDK</a></li>
-          <li><a href="http://llvm.org/releases">LLVM 3.2</a></li>
-          <li>An assembler - GCC (on Linux) and clang (on Mac OS X) are used as assembler frontends</li>
-          <li>A linker - GCC (on Linux) and clang (on Mac OS X) are used as linker frontends</li>
-          <li>Mac OS X only: To run iOS apps in the simulator or on a device you will need Xcode 4.6.2 installed</li>
-        </ul>
+          <h3>Ubuntu 12.04</h3>
+<pre>
+sudo apt-get install build-essential g++-multilib
+</pre>
+        <p>Download an ICU data file and place it in /usr/share/icu:</p>
+<pre>
+sudo mkdir -p /usr/share/icu
+sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
+</pre>
 
-        <h4>Mac OS X</h4>
+          <h3>Get the plugin</h3>
+          <p>
+            In Eclipse, go to <em>Help &rarr; Install New Software</em>, and paste the URL below into 
+            the dialog box. Select the <em>RoboVM for Eclipse</em> feature and click <em>Next</em>
+            and follow the instructions.
+          </p>
+          <pre>http://download.robovm.org/eclipse/</pre>
+          <p>
+            After the plugin has been installed and Eclipse has been restarted we can
+            create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; Project...</em>.
+            Select the <em>RoboVM &rarr; RoboVM Cocoa Touch Project</em> project type. Enter 
+            <code>IOSDemo</code> as project name, app name and main class. Enter <code>org.robovm.IOSDemo</code> 
+            as app id.
+          </p>
+          <p>
+            Create a new class (<em>File &rarr; New &rarr; Class</em>) and call it <code>IOSDemo</code> with 
+            no package name. Copy and paste the code below into the newly created file replacing whatever Eclipse auto generated for you.
+          </p>
+<pre class="prettyprint">
+{% include IOSDemo.java %}
+</pre>
+          <p>
+            Finally, launch the app in the iOS simulator by right clicking the project you created and 
+            select <em>Run As... &rarr; iOS Simulator App</em>.
+          </p>
+        </section>
+
+        <section id="cmdline">
+        <h2>Command line</h2>
+
+        <h3>Mac OS X</h3>
 
         <p>Download and install Java SE JDK 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>.</p>
 
-        <p>Install <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.2 from the Mac App Store</a>. It includes clang and and the iOS simulator.</p>
+        <p>Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a></p>
 
-        <p>Download and install the LLVM tools to /opt/llvm by running the following commands in a terminal:</p>
-        
-<pre>
-curl -O http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-apple-darwin11.tar.gz
-sudo mkdir -p /opt
-sudo tar xvfz clang+llvm-3.2-x86_64-apple-darwin11.tar.gz -C /opt
-sudo rm -f /opt/llvm
-sudo ln -s /opt/clang+llvm-3.2-x86_64-apple-darwin11 /opt/llvm
-</pre>
-
-        <h4>Ubuntu 12.04 (AMD64)</h4>
-
-        <p>Most of the required tools are available in the standard Ubuntu repositories. In a terminal:</p>
+        <h3>Ubuntu 12.04</h3>
 
 <pre>
 sudo apt-get install build-essential g++-multilib openjdk-7-jdk
 </pre>
 
-        <p>Download and install the LLVM tools to /opt/llvm:</p>
-
-<pre>
-curl -O http://llvm.org/releases/3.2/clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz
-sudo tar xvfz clang+llvm-3.2-x86_64-linux-ubuntu-12.04.tar.gz -C /opt
-sudo rm -f /opt/llvm
-sudo ln -s /opt/clang+llvm-3.2-x86_64-linux-ubuntu-12.04 /opt/llvm
-</pre>
-
-        <p>On Linux we need to download an ICU data file and place it in /usr/share/icu:</p>
+        <p>Download an ICU data file and place it in /usr/share/icu:</p>
 
 <pre>
 sudo mkdir -p /usr/share/icu
@@ -94,27 +107,15 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
 
         <h3>Installing RoboVM</h3>
 
-        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> or use a package built by following the <a href="#build">build instructions</a> then run the following commands in a terminal to install it to /opt/robovm:</p>
-
-<pre>
-sudo tar xvfz robovm-{{site.robovm.version}}.tar.gz -C /opt
-sudo rm -f /opt/robovm
-sudo ln -s /opt/robovm-{{site.robovm.version}} /opt/robovm
-</pre>
-
-        <p>If you had a previous RoboVM version installed it is recommended that you remove the cache of compiled classes:</p>
-
-<pre>
-rm -rf ~/.robovm/cache
-</pre>
+        <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> and unpack it somewhere in your home folder:</p>
 
         </section>
 
         <section id="console-example">
-        <h2>Your first RoboVM program</h2>
+        <h3>'Hello World'</h3>
 
         <p>
-          Now let's compile a simple Java program into a native executable using RoboVM. First
+          This compiles a simple Java program into a native executable using RoboVM. First
           create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
@@ -186,7 +187,7 @@ HelloWorld/HelloWorld
         </section>
 
         <section id="ios-example">
-        <h2>A simple iOS app</h2>
+        <h3>A simple iOS app</h3>
 
         <p>
           While it's nice to be able to make native console programs like we did above
@@ -195,44 +196,7 @@ HelloWorld/HelloWorld
         </p>
 
 <pre class="prettyprint">
-import org.robovm.cocoatouch.coregraphics.*;
-import org.robovm.cocoatouch.foundation.*;
-import org.robovm.cocoatouch.uikit.*;
-
-public class IOSDemo extends UIApplicationDelegate.Adapter {
-
-    private UIWindow window = null;
-    private int clickCount = 0;
-
-    @Override
-    public boolean didFinishLaunching(UIApplication application,
-            NSDictionary launchOptions) {
-  
-        final UIButton button = UIButton.fromType(UIButtonType.RoundedRect);
-        button.setFrame(new CGRect(115.0f, 121.0f, 91.0f, 37.0f));
-        button.setTitle("Click me!", UIControlState.Normal);
-
-        button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            @Override
-            public void onTouchUpInside(UIControl control, UIEvent event) {
-                button.setTitle("Click #" + (++clickCount), UIControlState.Normal);
-            }
-        });
-
-        window = new UIWindow(UIScreen.getMainScreen().getBounds());
-        window.setBackgroundColor(UIColor.lightGrayColor());
-        window.addSubview(button);
-        window.makeKeyAndVisible();
-        
-        return true;
-    }
-
-    public static void main(String[] args) {
-        NSAutoreleasePool pool = new NSAutoreleasePool();
-        UIApplication.main(args, null, IOSDemo.class);
-        pool.drain();
-    }
-}
+{% include IOSDemo.java %}
 </pre>
 
         <p>
@@ -250,10 +214,10 @@ javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/rob
         </section>
 
         <section id="eclipse-example">
-        <h2>Using the Eclipse plug-in</h2>
+        <h2>Using the Eclipse plugin</h2>
 
         <p>
-          Now lets install the RoboVM Eclipse plug-in and try it out. Open Eclipse, 
+          Now lets install the RoboVM Eclipse plugin and try it out. Open Eclipse, 
           go to <em>Help &rarr; Install New Software</em>, and paste the URL below into 
           the dialog box. Select the <em>RoboVM for Eclipse</em> feature and click <em>Next</em>
           and follow the instructions.
@@ -262,7 +226,7 @@ javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/rob
         <pre>http://download.robovm.org/eclipse/</pre>
 
         <p>
-          After the plug-in has been installed and Eclipse has been restarted we can
+          After the plugin has been installed and Eclipse has been restarted we can
           create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; Project...</em>.
           Select the <em>RoboVM &rarr; RoboVM Cocoa Touch Project</em> project type. Give the new 
           project a name and leave all other settings at their defaults.
