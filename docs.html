@@ -13,8 +13,8 @@ section: docs
           <a href="#quick-start"><i class="icon-chevron-right"></i> Quick start</a>
           <ul class="nav nav-list">
             <li><a href="#requirements"><i class="icon-chevron-right"></i> Requirements</a></li>
-            <li><a href="#eclipse"><i class="icon-chevron-right"></i> Eclipse</a></li>
-            <li><a href="#cmdline"><i class="icon-chevron-right"></i> Command line tool</a></li>
+            <li><a href="#eclipse"><i class="icon-chevron-right"></i> RoboVM for Eclipse</a></li>
+            <li><a href="#cmdline"><i class="icon-chevron-right"></i> Using the command line tool</a></li>
           </ul>
         </li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
@@ -58,10 +58,14 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
 </pre>
 
         <section id="eclipse">
-          <h2>Eclipse</h2>
+          <h2>RoboVM for Eclipse</h2>
 
           <p>
-            The RoboVM for Eclipse plugin is known to work with Eclipse 4.2 (Juno) and later.
+            The RoboVM for Eclipse plugin is the quickest way to get started with RoboVM.
+            The plugin is known to work with Eclipse 4.2 (Juno) and later. The example below
+            demonstrates how to create a simple iOS app from within Eclipse. The 
+            <a href="#cmdline">next section</a>
+            has some more info on what goes on under the hood when you use the RoboVM compiler.
           </p>
 
           <p>
@@ -86,18 +90,12 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
         </section>
 
         <section id="cmdline">
-        <h2>Command line tool</h2>
+        <h2>Using the command line tool</h2>
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> and unpack it somewhere in your home folder.</p>
 
-        </section>
-
-        <section id="console-example">
-        <h3>'Hello World'</h3>
-
         <p>
-          This compiles a simple Java program into a native executable using RoboVM. First
-          create <code>HelloWorld.java</code> in a new folder with the following contents:
+          Create <code>HelloWorld.java</code> in a new folder with the following contents:
         </p>
 
 <pre class="prettyprint">
@@ -118,7 +116,7 @@ javac -d classes/ HelloWorld.java
 
         <p>Finally, compile the Java bytecode into native code using:</p>
 <pre>
-/opt/robovm/bin/robovm -verbose -cp classes/ HelloWorld
+robovm-{{site.robovm.version}}/bin/robovm -verbose -cp classes/ HelloWorld
 </pre>
 
         <div class="alert alert-info">
@@ -135,7 +133,7 @@ javac -d classes/ HelloWorld.java
 
         <p>
           You should now have a native executable called <code>HelloWorld/HelloWorld</code>.
-          Since we didn't specify a CPU or OS to the <code>/opt/robovm/bin/robovm</code>
+          Since we didn't specify a CPU or OS to the <code>robovm-{{site.robovm.version}}/bin/robovm</code>
           command the compiler will produce a binary which can be run on the 
           current system (either Linux or Mac OS X). Running it should print:</p>
 <pre>
@@ -165,10 +163,7 @@ HelloWorld/HelloWorld
           file system.
         </p>
 
-        </section>
-
-        <section id="ios-example">
-        <h3>A simple iOS app</h3>
+        <h3>Compiling a simple iOS app</h3>
 
         <p>
           While it's nice to be able to make native console programs like we did above
@@ -185,45 +180,13 @@ HelloWorld/HelloWorld
         </p>
 <pre>
 mkdir classes
-javac -cp /opt/robovm/lib/robovm-rt.jar:/opt/robovm/lib/robovm-objc.jar:/opt/robovm/lib/robovm-cocoatouch.jar -d classes/ IOSDemo.java
+javac -cp robovm-{{site.robovm.version}}/lib/robovm-rt.jar:robovm-{{site.robovm.version}}/lib/robovm-objc.jar:robovm-{{site.robovm.version}}/lib/robovm-cocoatouch.jar -d classes/ IOSDemo.java
 </pre>
 
         <p>Compile the Java bytecode into native code and launch the app using:</p>
 <pre>
-/opt/robovm/bin/robovm -verbose -arch x86 -os ios -cp /opt/robovm/lib/robovm-objc.jar:/opt/robovm/lib/robovm-cocoatouch.jar:classes/ -run IOSDemo
+robovm-{{site.robovm.version}}/bin/robovm -verbose -arch x86 -os ios -cp robovm-{{site.robovm.version}}/lib/robovm-objc.jar:robovm-{{site.robovm.version}}/lib/robovm-cocoatouch.jar:classes/ -run IOSDemo
 </pre>
-        </section>
-
-        <section id="eclipse-example">
-        <h2>Using the Eclipse plugin</h2>
-
-        <p>
-          Now lets install the RoboVM Eclipse plugin and try it out. Open Eclipse, 
-          go to <em>Help &rarr; Install New Software</em>, and paste the URL below into 
-          the dialog box. Select the <em>RoboVM for Eclipse</em> feature and click <em>Next</em>
-          and follow the instructions.
-        </p>
-
-        <pre>http://download.robovm.org/eclipse/</pre>
-
-        <p>
-          After the plugin has been installed and Eclipse has been restarted we can
-          create a new RoboVM iOS project by selecting <em>File &rarr; New &rarr; Project...</em>.
-          Select the <em>RoboVM &rarr; RoboVM Cocoa Touch Project</em> project type. Give the new 
-          project a name and leave all other settings at their defaults.
-        </p>
-
-        <p>
-          Create a new class (<em>File &rarr; New &rarr; Class</em>) and call it <code>IOSDemo</code> with no package name. 
-          Copy the <code>IOSDemo.java</code> code from the <a href="#ios-example">section above</a>
-          and paste it into the editor replacing whatever Eclipse auto generated for you.
-        </p>
-
-        <p>
-          Finally, launch the app in the iOS simulator by right clicking the project you created and 
-          select <em>Run As... &rarr; iOS Simulator App</em>.
-        </p>
-
         </section>
 
       </section>
