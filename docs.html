@@ -12,8 +12,9 @@ section: docs
         <li>
           <a href="#quick-start"><i class="icon-chevron-right"></i> Quick start</a>
           <ul class="nav nav-list">
-            <li><a href="#eclipse"><i class="icon-chevron-right"></i> Using Eclipse</a></li>
-            <li><a href="#cmdline"><i class="icon-chevron-right"></i> Using the command line</a></li>
+            <li><a href="#requirements"><i class="icon-chevron-right"></i> Requirements</a></li>
+            <li><a href="#eclipse"><i class="icon-chevron-right"></i> Eclipse</a></li>
+            <li><a href="#cmdline"><i class="icon-chevron-right"></i> Command line tool</a></li>
           </ul>
         </li>
         <li><a href="#build"><i class="icon-chevron-right"></i> Building from source</a></li>
@@ -34,6 +35,28 @@ section: docs
           <h1>Quick start</h1>
         </div>
 
+        <section id="requirements">
+          <h2>Requirements</h2>
+          <h3>Mac OS X</h3>
+          <p>
+            Get Java SE JDK 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>.
+          </p>
+          <p>
+            Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a>
+          </p>
+
+          <h3>Ubuntu 12.04</h3>
+<pre>
+sudo apt-get install build-essential g++-multilib openjdk-7-jdk
+</pre>
+
+        <p>Download an ICU data file and place it in /usr/share/icu:</p>
+
+<pre>
+sudo mkdir -p /usr/share/icu
+sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
+</pre>
+
         <section id="eclipse">
           <h2>Eclipse</h2>
 
@@ -41,35 +64,6 @@ section: docs
             The RoboVM for Eclipse plugin is known to work with Eclipse 4.2 (Juno) and later.
           </p>
 
-          <h3>Requirements</h3>
-          <ul>
-            <li>Eclipse 4.2 (Juno) or later.</li>
-            <li>Mac OS X: Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a>
-            </li>
-            <li>
-              Ubuntu 12.04:
-<pre>
-sudo apt-get install build-essential g++-multilib
-</pre>
-        <p>Download an ICU data file and place it in /usr/share/icu:</p>
-<pre>
-sudo mkdir -p /usr/share/icu
-sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
-</pre>
-            </li>
-          </ul>
-
-          <h3>Ubuntu 12.04</h3>
-<pre>
-sudo apt-get install build-essential g++-multilib
-</pre>
-        <p>Download an ICU data file and place it in /usr/share/icu:</p>
-<pre>
-sudo mkdir -p /usr/share/icu
-sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
-</pre>
-
-          <h3>Get the plugin</h3>
           <p>
             Install the <em>RoboVM for Eclipse</em> plugin from the following update site:
           </p>
@@ -92,28 +86,7 @@ sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icud
         </section>
 
         <section id="cmdline">
-        <h2>Command line</h2>
-
-        <h3>Mac OS X</h3>
-
-        <p>Download and install Java SE JDK 7 from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a>.</p>
-
-        <p>Get <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">Xcode 4.6.3 from the Mac App Store</a></p>
-
-        <h3>Ubuntu 12.04</h3>
-
-<pre>
-sudo apt-get install build-essential g++-multilib openjdk-7-jdk
-</pre>
-
-        <p>Download an ICU data file and place it in /usr/share/icu:</p>
-
-<pre>
-sudo mkdir -p /usr/share/icu
-sudo sh -c 'curl "http://download.robovm.org/icudt48l.dat" > /usr/share/icu/icudt48l.dat'
-</pre>
-
-        <h3>Installing RoboVM</h3>
+        <h2>Command line tool</h2>
 
         <p><a href="http://download.robovm.org/robovm-{{site.robovm.version}}.tar.gz">Download the latest RoboVM release</a> and unpack it somewhere in your home folder.</p>
 
